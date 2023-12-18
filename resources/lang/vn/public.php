@@ -1,0 +1,598 @@
+<?php
+
+return array(
+    //auth
+    'welcome_back' => 'Chào mừng trở lại',
+    'remember_me' => 'Ghi nhớ đăng nhập',
+    'forgot_password' => 'Quên mật khẩu',
+    'sign_in' => 'Đăng nhập',
+    'access_denied' => 'Truy cập bị từ chối',
+    'invalid_auth' => 'Email hoặc mật khẩu không hợp lệ',
+    'dont_have_acc' => 'Chưa có tài khoản?',
+    'register_here' => 'Đăng ký tại đây',
+    'success_register' => 'Tạo tài khoản thành công! Đăng nhập để xem tài khoản',
+    'register_des' => 'Vui lòng điền đầy đủ thông tin để tham gia cộng đồng tuyệt vời của chúng tôi.',
+    'select_country' => 'Vui lòng chọn quốc gia của bạn',
+    'referral_code' => 'Mã giới thiệu (tùy chọn)',
+    'invalid_referral_code' => 'Mã giới thiệu không hợp lệ',
+    'tnc' => 'Tôi đã đọc, hiểu và đồng ý với các điều khoản và điều kiện.',
+    'tnc_check' => 'Điều khoản và điều kiện',
+    'have_acc' => 'Đã có tài khoản?',
+    'forgot_yr_pass' => 'Quên mật khẩu của bạn?',
+    'insert_email' => 'Nhập địa chỉ email tại đây.',
+    'send_email' => 'Gửi email',
+    'loading' => 'Đang tải',
+    'sent' => 'Chúng tôi đã gửi email chứa liên kết đặt lại mật khẩu.',
+    'reset_password' => 'Đặt lại mật khẩu',
+    'success_reset' => 'Đặt lại mật khẩu thành công! Đăng nhập bằng mật khẩu mới',
+    'required_tnc' => 'Vui lòng đánh dấu vào ô này nếu bạn muốn tiếp tục',
+
+//header
+    'wallet_balance' => 'Số dư Ví',
+    'wallet' => 'Ví',
+    'balance' => 'Số dư',
+    'change_password' => 'Thay đổi mật khẩu',
+    'leave_impersonate' => 'Thoát chế độ ủy quyền',
+    'logout' => 'Đăng xuất',
+    'close' => 'Đóng',
+    'error_icon' => 'Biểu tượng lỗi',
+
+//sidebar
+    'dashboard' => 'Bảng điều khiển',
+    'profile' => 'Hồ sơ',
+    'profile_details' => 'Thông tin hồ sơ',
+    'profile_verification' => 'Xác minh hồ sơ',
+    'broker&fund' => 'Sàn giao dịch & Quỹ',
+    'broker_list' => 'Danh sách Sàn giao dịch',
+    'fund' => 'Quỹ',
+    'network_plan' => 'Kế hoạch thị trường',
+    'network_tree' => 'Cây mạng lưới',
+    'network' => 'Mạng lưới',
+    'commissions' => 'Hoa hồng',
+    'withdrawals' => 'Rút tiền',
+    'members' => 'Thành viên',
+    'add_members' => 'Thêm thành viên mới',
+    'members_list' => 'Danh sách thành viên',
+    'reports' => 'Báo cáo',
+    'deposits' => 'Nạp tiền',
+    'listing' => 'Liệt kê',
+    'downline_listing' => 'Danh sách hệ thống cấp dưới',
+    'referrals' => 'Giới thiệu',
+    'referrals_tree' => 'Cây giới thiệu',
+    'transfer' => 'Chuyển khoản',
+    'brokers' => 'Sàn giao dịch',
+    'news' => 'Tin tức',
+    'open_sidebar' => 'Mở thanh bên',
+
+//member dashboard
+    'personal_deposit' => 'Nạp tiền cá nhân',
+    'total' => 'Tổng cộng',
+    'more' => 'Xem thêm',
+    'group_deposit' => 'Nạp tiền nhóm',
+    'referral_program' => 'Chương trình giới thiệu',
+    'share_referral' => 'Chia sẻ liên kết giới thiệu của bạn thông qua liên kết QR hoặc các cổng thông tin truyền thông xã hội',
+    'referral_id' => 'Mã giới thiệu',
+    'news_and_announcement' => 'Tin tức & Thông báo',
+    'close_modal' => 'Đóng cửa sổ',
+    'IB' => 'Môi giới giới thiệu',
+    'SIB' => 'Môi giới giới thiệu cao cấp',
+    'MIB' => 'Môi giới giới thiệu chính',
+    'UM' => 'Quản lý đơn vị',
+    'RM' => 'Quản lý vùng',
+    'Trader' => 'Nhà giao dịch',
+
+//member profile
+    'rank' => 'Xếp hạng',
+    'personal_details' => 'Thông tin cá nhân',
+    'name' => 'Tên',
+    'email' => 'Email',
+    'contact' => 'Số điện thoại liên hệ',
+    'avatar' => 'Hình đại diện',
+    'change_avatar' => 'Thay đổi hình đại diện',
+    'location' => 'Vị trí',
+    'address' => 'Địa chỉ',
+    'country' => 'Quốc gia',
+    'upload_avatar' => 'Tải lên hình đại diện',
+    'upload_file' => 'Tải lên tập tin',
+    'profile_pic_req' => 'Chỉ JPG, JPEG, HOẶC PNG (Tối đa 250x250px).',
+    'save' => 'Lưu',
+    'cancel' => 'Hủy',
+
+//member broker
+    'instructor_note' => 'Ghi chú của người hướng dẫn',
+    'click_redirect_message' => 'Liên kết đăng ký',
+
+//member fund
+    'current_fund' => 'Quỹ hiện tại',
+
+//member network tree
+    'last_updated' => 'Cập nhật lần cuối vào : GMT+8 ',
+    'direct_downlines' => 'Hệ thống cấp dưới trực tiếp',
+    'total_personal_deposit' => 'Tổng tiền gửi cá nhân',
+    'total_group_deposit' => 'Tổng tiền gửi nhóm',
+
+//member network tree > account
+    'view_deposit' => 'Xem tiền gửi',
+    'total_rebate_personal_deposit' => 'Tổng hoàn trả cho tiền gửi cá nhân',
+    'total_rebate_group_deposit' => 'Tổng hoàn trả cho tiền gửi nhóm',
+    'total_downline' => 'Tổng số hệ thống cấp dưới',
+    'total_clients' => 'Tổng số khách hàng trực tiếp',
+
+//member commissions
+    'total_earn' => 'Tổng số thu nhập',
+
+//member withdrawals
+    'withdraw' => 'Rút tiền',
+    'withdrawal_as_USDT' => 'Rút tiền dưới dạng USDT',
+    'available_balance' => 'Số dư khả dụng',
+    'withdrawal_amount' => 'Số tiền rút',
+    'max' => 'Tối đa',
+    'transaction_fee' => 'Phí giao dịch',
+    'withdrawal_total' => 'Tổng số tiền rút',
+    'successfully_deleted_withdrawal' => 'Hủy yêu cầu rút tiền thành công',
+    'cancel_withdrawal_confirmation' => 'Bạn có chắc chắn muốn hủy yêu cầu rút tiền này không?',
+    'discard' => 'Hủy bỏ',
+    'successfully_update_withdrawal' => 'Cập nhật yêu cầu rút tiền thành công',
+    'successfully_cancel_withdrawal' => 'Hủy yêu cầu rút tiền thành công',
+    'cancelled' => 'Đã hủy',
+
+//admin dashboard
+    'total_group_sales' => 'Tổng số tiền bán nhóm',
+    'total_withdrawals' => 'Tổng số tiền rút',
+    'total_commissions' => 'Tổng số hoa hồng',
+    'total_members' => 'Tổng số thành viên',
+
+//admin add member form
+    'member_edit' => 'CHỈNH SỬA Hồ sơ',
+    'member_access' => 'Quyền truy cập của thành viên',
+    'email_address' => 'Địa chỉ email',
+    'role' => 'Vai trò',
+    'member' => 'Thành viên',
+    'admin' => 'Quản trị viên',
+    'password' => 'Mật khẩu',
+    'password_confirmation' => 'Xác nhận mật khẩu',
+    'member_details' => 'Thông tin thành viên',
+    'member_add' => 'Thêm thành viên',
+    'update' => 'Cập nhật',
+
+//admin member details
+    'edit' => 'Chỉnh sửa',
+    'rank_details' => 'Chi tiết xếp hạng',
+    'last_rank_up' => 'Lần xếp hạng gần đây nhất',
+    'auto' => 'Tự động',
+    'manual' => 'Thủ công',
+    'date_join' => 'Ngày tham gia',
+    'active' => 'Hoạt động',
+    'inactive' => 'Không hoạt động',
+    'suspend' => 'Đình chỉ',
+    'change_rank' => 'Thay đổi xếp hạng',
+    'auto_rank_up' => 'Tự động thăng hạng',
+    'confirm' => 'Xác nhận',
+    'password_type' => 'Loại mật khẩu',
+    'password_validation_1' => 'Phải bao gồm a-z và A-Z',
+    'password_validation_2' => 'Phải bao gồm một số',
+    'password_validation_3' => 'Phải bao gồm ký tự đặc biệt',
+    'password_validation_4' => 'Tối thiểu 6 ký tự',
+    'yes' => 'Có',
+    'no' => 'Không',
+    'successfully_added_extra_bonus' => 'Thêm phần thưởng bổ sung thành công',
+
+    'access' => 'Truy cập',
+    'access_confirmation' => 'Bạn có chắc chắn muốn cấp quyền truy cập cho người dùng này?',
+    'choose_auto_rank_up_status' => 'Chọn trạng thái thăng hạng tự động',
+
+//admin member commissions
+    'choose_broker' => 'Chọn sàn giao dịch',
+    'back' => 'Trở lại',
+    'click_upload' => 'Nhấp để tải lên',
+    'or_drap_drop' => ' hoặc kéo và thả',
+    'excel_mime_type' => 'xlsx, csv, xls',
+    'file_uploaded' => 'Tập tin đã được tải lên!',
+    'delete_comm_confirmation' => 'Bạn có chắc chắn muốn xóa hoa hồng này không?',
+    'delete_confirmed' => 'Có, tôi chắc chắn!',
+    'delete_cancel' => 'Không, hủy',
+    'select_user' => 'Chọn người dùng',
+    'upline_email' => 'Email người giới thiệu',
+    'no_upline' => 'Không có người giới thiệu',
+
+//admin member deposit
+    'delete_deposit_confirmation' => 'Bạn có chắc chắn muốn xóa khoản nạp này không?',
+
+    //admin member withdrawal
+    'delete_with_confirmation' => 'Bạn có chắc chắn muốn xóa yêu cầu rút tiền này không?',
+    'select_status' => 'Vui lòng chọn trạng thái',
+    'date_submit' => 'Ngày gửi',
+    'approve' => 'Phê duyệt',
+    'reject' => 'Từ chối',
+
+//admin member transfer
+    'transfer_message' => 'Chuyển khách hàng sang mạng lưới khác.',
+    'choose_customer' => 'Chọn Người dùng',
+    'search_choose_transfer' => 'Tìm kiếm và chọn khách hàng bạn muốn chuyển.',
+    'confirm_transfer' => 'Xác nhận chuyển',
+
+//admin broker
+    'search_name' => 'Tìm kiếm Tên...',
+    'add_broker' => 'Thêm Sàn giao dịch',
+    'en' => 'EN',
+    'cn' => 'CN',
+    'tw' => 'TW',
+    'th' => 'THAI',
+    'id' => 'INDO',
+    'vn' => 'VN',
+    'remove' => 'Xóa',
+    'delete_broker_confirmation' => 'Bạn có chắc chắn muốn xóa hồ sơ Sàn giao dịch này không?',
+    'url' => 'URL',
+    'description' => 'Mô tả',
+    'broker_image' => 'Hình ảnh Sàn giao dịch',
+    'broker_image_req' => 'SVG, PNG, JPG hoặc GIF.',
+    'qr_code' => 'Mã QR',
+    'create_broker' => 'Tạo Hồ sơ Sàn giao dịch',
+    'update_broker' => 'Cập nhật Hồ sơ Sàn giao dịch',
+
+//admin news
+    'create_news' => 'Tạo Tin tức',
+    'update_news' => 'Cập nhật Tin tức',
+    'visibility' => 'Hiển thị',
+    'visible' => 'Có thể nhìn thấy',
+    'not_visible' => 'Không thể nhìn thấy',
+    'popup_status' => 'Pop Up',
+    'news_title' => 'Tiêu đề Tin tức',
+    'date_created' => 'Ngày tạo',
+    'delete_news_confirmation' => 'Bạn có chắc chắn muốn xóa Tin tức này không?',
+    'title' => 'Tiêu đề',
+
+//table usage
+//filtering
+    'select_start_date' => 'Chọn ngày bắt đầu',
+    'select_end_date' => 'Chọn ngày kết thúc',
+    'to' => 'đến',
+    'select_broker' => 'Chọn Sàn giao dịch',
+    'search_email' => 'Tìm kiếm Email hoặc Tên...',
+    'filter_status' => 'Lọc theo Trạng thái',
+    'export_excel' => 'Xuất ra Excel',
+    'search' => 'Tìm kiếm',
+    'reset' => 'Đặt lại',
+    'export_list' => 'Xuất Danh sách',
+    'export_report' => 'Xuất Báo cáo',
+    'import' => 'Nhập',
+    'import_commissions' => 'Nhập Hoa hồng',
+    'import_deposits' => 'Nhập Tiền gửi',
+    'download_template' => 'Tải xuống Mẫu',
+
+//table header
+    'date' => 'Ngày',
+    'broker' => 'Sàn giao dịch',
+    'amount' => 'Số tiền',
+    'lot_size' => 'Kích thước lô',
+    'status' => 'Trạng thái',
+    'action' => 'Hành động',
+    'method' => 'Phương thức',
+    'referral_name' => 'Tên giới thiệu',
+    'downline_name' => 'Tên hệ thống cấp dưới',
+//navigation
+    'showing' => 'Hiển thị',
+    'of' => 'của',
+    'entries' => 'Bản ghi',
+    'info' => 'Thông tin',
+    'no_record' => 'Chưa có bản ghi nào.',
+//status
+    'process' => 'Đang xử lý',
+    'calculated' => 'Đã tính toán',
+    'approved' => 'Đã phê duyệt',
+    'rejected' => 'Đã từ chối',
+
+//newly added
+    'new_password' => 'Mật khẩu mới',
+    'current_password' => 'Mật khẩu hiện tại',
+    'confirm_password' => 'Xác nhận mật khẩu mới',
+
+    'done' => 'Hoàn thành',
+    'try_again' => 'Vui lòng thử lại sau',
+    'invalid_action' => 'Hành động không hợp lệ',
+
+//admin title
+    'deposit_downline' => 'Tiền gửi - Hệ thống cấp dưới',
+    'commission_downline' => 'Hoa hồng - Hệ thống cấp dưới',
+    'withdrawal_downline' => 'Rút tiền - Hệ thống cấp dưới',
+    'add_member' => 'Thêm Thành viên',
+    'update_member' => 'Cập nhật Thành viên',
+    'network_transfer' => 'Chuyển mạng lưới',
+
+//BrokersController
+
+    'successfully_added_broker' => 'Đã thêm thành công Hồ sơ Sàn giao dịch',
+    'successfully_updated_broker' => 'Đã cập nhật thành công Hồ sơ Sàn giao dịch',
+    'successfully_deleted_broker' => 'Đã xóa thành công Hồ sơ Sàn giao dịch',
+
+    'invalid_broker' => 'Hồ sơ Sàn giao dịch không hợp lệ',
+
+//CommissionsController
+
+    'invalid_commission' => 'Hoa hồng không hợp lệ',
+    'commission_status_error' => 'Chỉ có thể xóa những hoa hồng chưa tính toán',
+    'successfully_deleted_commission' => 'Đã xóa thành công Hoa hồng',
+
+
+//DepositController
+
+    'import_success' => 'Tập tin đã được nhập thành công',
+    'invalid_deposit' => 'Tiền gửi không hợp lệ',
+    'successfully_deleted_deposit' => 'Đã xóa thành công Tiền gửi',
+
+//MemberController
+
+    'successfully_added_member' => 'Đã thêm thành công Thông tin Thành viên',
+    'invalid_user' => 'Người dùng không hợp lệ',
+    'successfully_updated_member' => 'Đã cập nhật thành công Thông tin Thành viên',
+    'successfully_updated_rank' => 'Đã cập nhật thành công Thông tin xếp hạng',
+    'invalid_withdrawal' => 'Người dùng không có bản ghi nạp tiền nào trên Sàn giao dịch đã chọn',
+    'insufficient_amount' => 'Số tiền không đủ',
+    'success_adjust_fund' => 'Quỹ đã điều chỉnh thành công',
+
+//NewsController
+
+    'successfully_added_news' => 'Đã tạo Tin tức thành công',
+    'invalid_news' => 'Tin tức không hợp lệ',
+    'successfully_updated_news' => 'Đã cập nhật Tin tức thành công',
+    'successfully_deleted_news' => 'Đã xóa Tin tức thành công',
+
+//ReferralController
+    'successfully_transfer_customer' => 'Đã chuyển Khách hàng thành công',
+
+//UserController
+
+    'successfully_updated_profile' => 'Đã cập nhật Thông tin cá nhân của bạn thành công',
+    'current_password_invalid' => 'Mật khẩu hiện tại không hợp lệ',
+    'current_same_password' => 'Mật khẩu mới không thể giống với mật khẩu hiện tại của bạn',
+    'successfully_updated_password' => 'Đã cập nhật Mật khẩu thành công.',
+
+//WithdrawalController
+    'successfully_updated_withdrawal_status' => 'Đã cập nhật Trạng thái rút tiền thành công',
+
+//Custom Attribute Names or Messages
+    'broker_image_dimensions' => 'Hình ảnh Sàn giao dịch yêu cầu kích thước 200x200 pixel.',
+    'qr_image_display_length' => 'Kích thước tối đa của mã QR là 512x256 pixel',
+    'file_required' => 'Vui lòng TẢI lên một tập tin để nhập',
+    'file_mimes' => 'Phần mở rộng tập tin phải là .xlsx, .csv, .xls',
+    'broker_id' => 'Lựa chọn Sàn giao dịch không hợp lệ',
+    'import_error' => 'Lỗi trong hàng :row.',
+    'transaction_date_required' => 'Trường ngày giao dịch là bắt buộc.',
+    'transaction_date_regex' => 'Định dạng trường ngày giao dịch không hợp lệ.',
+    'lot_size_required' => 'Trường kích thước lô là bắt buộc.',
+    'lot_size_numeric' => 'Trường kích thước lô phải là số.',
+    'profile_image' => 'Hình đại diện',
+
+    'type' => 'Loại',
+    'type_deposit' => 'Tiền gửi',
+
+    'leader' => 'Người dẫn đầu',
+    'first_leader' => 'Người dẫn đầu đầu tiên',
+    'top_leader' => 'Người dẫn đầu hàng đầu',
+    'leader_status' => 'Trạng thái người dẫn đầu',
+
+    'member_verification_message' => 'Vì lý do an ninh vốn của bạn, bạn phải tải lên tất cả các tài liệu để hoàn tất xác minh tài khoản trước khi thực hiện rút tiền.',
+    'upload_id' => 'Tải lên ID',
+    'front_id' => 'Bản sao của ID của bạn (mặt trước)',
+    'back_id' => 'Bản sao của ID của bạn (mặt sau)',
+    'id_req' => 'Bạn có thể tải tài liệu lên dưới các định dạng .png, .jpeg hoặc .jpg với dung lượng tối đa 5MB.',
+
+    'kyc_approval' => 'Phê duyệt KYC',
+    'approval' => 'Phê duyệt',
+    'copy_id' => 'Bản sao của ID của bạn',
+    'kyc_approval_status' => 'Trạng thái phê duyệt KYC',
+    'kyc_not_verify' => 'Chưa xác minh',
+    'kyc_pending_verify' => 'Đang chờ xác minh',
+    'kyc_verified' => 'Đã xác minh',
+    'pending_upload' => 'Đang Chờ Tải Lên',
+    'kyc_approved' => 'KYC Đã Duyệt',
+    'view_id' => 'Xem bản sao của ID',
+    'successfully_uploaded_ic' => 'Đã tải lên thành công ID của bạn!',
+    'fail_uploaded_ic' => 'Tài khoản của bạn đã được xác minh!',
+    'successfully_approve_kyc' => 'Đã cập nhật trạng thái phê duyệt KYC của người dùng!',
+    'kyc_approval_confirmation' => 'Bạn có chắc chắn muốn phê duyệt trạng thái KYC của người dùng này không?',
+    'user_verified' => 'Người dùng đã được xác minh',
+    'invalid_status' => 'Chỉ có thể thực hiện hành động xác minh trên trạng thái đang chờ.',
+    'kyc_pending_message' => 'Hồ sơ xác minh của bạn đã được gửi! Hãy chờ quản trị viên xác minh.',
+    'kyc_not_verify_message' => 'Hồ sơ của bạn chưa được xác minh! Tải lên tài liệu để tiến hành xác minh',
+    'kyc_reject_message' => 'Hồ sơ xác minh của bạn đã bị từ chối! Gửi lại để cho phép quản trị viên xác minh.',
+
+    'personal_daily_deposit' => 'Tiền gửi hàng ngày cá nhân',
+    'personal_weekly_deposit' => 'Tiền gửi hàng tuần cá nhân',
+    'unnecessary_withdraw' => 'Số tiền rút cuối cùng sẽ bằng hoặc ít hơn 0.',
+    'withdrawal_pending_request' => 'Chỉ cho phép một yêu cầu rút tiền mỗi lần, vui lòng đợi phê duyệt cho yêu cầu trước đó.',
+
+    //performance bonus
+    'performance_bonus' => 'Tiền Thưởng Hiệu Suất',
+    'pending' => 'Đang Chờ',
+    'downline_rank' => 'Xếp Hạng Hệ Thống Cấp Dưới',
+    'upline_name' => 'Tên Người Giới Thiệu',
+    'upline_rank' => 'Xếp Hạng Người Giới Thiệu',
+    'commission_amount' => 'Số Tiền Hoa Hồng',
+    'bonus' => 'Thưởng (%)',
+    'bonus_amount' => 'Số Tiền Thưởng',
+    'approve_claim' => 'Phê Duyệt Thành Công Tiền Thưởng Hiệu Suất',
+    'reject_claim' => 'Tiền Thưởng Hiệu Suất Đã Bị Từ Chối',
+
+//welcome page
+    'pending_description' => 'Vui lòng kiên nhẫn chờ quản trị viên xem qua yêu cầu của bạn.',
+    'withdraw_request' => 'Yêu Cầu Rút Tiền',
+    'read_more' => 'Xem Thêm',
+
+//event
+    'event' => 'Sự Kiện',
+    'invalid_event' => 'Sự Kiện Không Hợp Lệ',
+    'successfully_added_event' => 'Đã Tạo Sự Kiện Thành Công',
+    'successfully_updated_event' => 'Đã Cập Nhật Sự Kiện Thành Công',
+    'successfully_deleted_event' => 'Đã Xóa Sự Kiện Thành Công',
+    'delete_event_confirmation' => 'Bạn có chắc chắn muốn xóa sự kiện này?',
+    'create_event' => 'Tạo Sự Kiện',
+    'update_event' => 'Cập Nhật Sự Kiện',
+    'event_title' => 'Tiêu Đề Sự Kiện',
+    'event_image' => 'Hình Ảnh Sự Kiện',
+    'click_to_view' => 'Nhấp để Xem',
+
+//tree verification
+    'tree_verification' => 'Xác minh mật khẩu để xem cây genealogy',
+    'enter_password' => 'Nhập Mật khẩu',
+    'verify' => 'Xác minh',
+    'group_daily_deposit' => 'Tiền Gửi Hàng Ngày Nhóm',
+    'group_monthly_deposit' => 'Tiền Gửi Hàng Tháng Nhóm',
+    'personal_monthly_deposit' => 'Tiền Gửi Hàng Tháng Cá Nhân',
+
+    'group_daily_withdrawal' => 'Rút Tiền Hàng Ngày Nhóm',
+    'group_monthly_withdrawal' => 'Rút Tiền Hàng Tháng Nhóm',
+    'personal_daily_withdrawal' => 'Rút Tiền Hàng Ngày Cá Nhân',
+    'personal_monthly_withdrawal' => 'Rút Tiền Hàng Tháng Cá Nhân',
+
+    'deposit_amount' => 'Số Tiền Gửi',
+    'deposit_withdrawal_amount' => 'Số Tiền Rút (Vốn)',
+    'deposit_downline_listing' => 'Danh Sách Hệ Thống Cấp Dưới Gửi Tiền',
+
+    'wallet_adjustment' => 'Điều Chỉnh Ví',
+    'fund_adjustment' => 'Điều chỉnh quỹ',
+    'adjustment_amount' => 'Số Tiền Điều Chỉnh',
+    'adjustment_remark' => 'Ghi Chú Điều Chỉnh',
+    'submit' => 'Gửi',
+    'fail_to_adjust_wallet' => 'Không Thể Điều Chỉnh Số Tiền Ví Của Người Dùng!',
+    'success_to_adjust_wallet' => 'Đã Điều Chỉnh Thành Công Số Tiền Ví Của Người Dùng!',
+    'wallets_log' => 'Nhật Ký Ví',
+    'old_amount' => 'Số Dư Cũ',
+    'new_amount' => 'Số Dư Mới',
+    'daily' => 'Hàng Ngày',
+    'monthly' => 'Hàng Tháng',
+
+    'setting' => 'Cài Đặt',
+    'master_setting' => 'Cài Đặt Chính',
+    'setting_listing' => 'Danh Sách Cài Đặt',
+    'update_setting' => 'Cập Nhật Cài Đặt',
+    'value' => 'Giá Trị',
+    'choose_value_type' => 'Chọn Loại Giá Trị',
+    'date_value' => 'Ngày',
+    'invalid_setting' => 'Cài Đặt Không Hợp Lệ',
+    'successfully_updated_setting' => 'Cập Nhật Cài Đặt Thành Công!',
+
+    'monthly_lot' => 'Kích Thước Lô Hàng Tháng',
+    'lot_size_pool' => 'Tổng lô toàn cầu',
+    'ranking_log' => 'Nhật Ký Xếp Hạng',
+    'new_rank' => 'Xếp Hạng Mới',
+    'old_rank' => 'Xếp Hạng Cũ',
+
+    'withdrawal_action' => 'Cài Đặt Rút Tiền',
+    'choose_type' => 'Chọn Loại',
+    'personal' => 'Cá Nhân',
+    'group' => 'Nhóm',
+    'select_action' => 'Chọn Hành Động',
+    'enable' => 'Bật',
+    'disable' => 'Tắt',
+    'user' => 'Người Dùng',
+    'successfully_updated_withdrawal_setting' => 'Cập Nhật Hành Động Rút Tiền Thành Công',
+
+//email status & acknowledgement letter
+    'acknowledgement_letter' => 'Thư Cảm Ơn',
+    'send' => 'Gửi',
+    'specific_user' => 'Chỉ Dành Cho Người Dùng Cụ Thể',
+    'with_children' => 'Cùng Với Con Cái Của Họ',
+    'status_not_allow' => 'Trạng thái hiện tại của người dùng không cho phép họ nhận thư này',
+    'successfully_send_acknowledgement' => 'Đã Gửi Thư Cảm Ơn Thành Công',
+    'email_status' => 'Trạng Thái Email',
+    'successfully_updated_email_status_setting' => 'Cập Nhật Trạng Thái Email Thành Công',
+
+//deleted member report
+    'deleted_member' => 'Thành Viên Đã Xóa',
+    'deleted_date' => 'Ngày Xóa',
+
+//Extra bonus
+    'extra_bonus' => 'Tiền Thưởng Extra',
+    'delete_bonus_confirmation' => 'Bạn có chắc chắn muốn xóa tiền thưởng extra này?',
+    'successfully_deleted_extra_bonus' => 'Đã Xóa Tiền Thưởng Extra Thành Công',
+
+//new feature for withdrawal
+    'wallet_setting' => 'Cài Đặt Ví',
+    'wallet_address' => 'Địa Chỉ Ví',
+    'current_wallet_address' => 'Địa Chỉ Ví Hiện Tại',
+    'new_wallet_address' => 'Địa Chỉ Ví Mới',
+    'create_wallet' => 'Tạo Ví',
+    'withdrawal_pin' => 'Mã PIN Rút Tiền',
+    'setup_pin' => 'Cài Đặt PIN',
+    'member_wallet' => 'Ví Của Thành Viên',
+    'wallet_type' => 'Loại Ví',
+    'submit_request' => 'Gửi Yêu Cầu',
+    'request_status' => 'Trạng Thái Yêu Cầu',
+    'wallet_status' => 'Trạng Thái Ví',
+    'requested_at' => 'Đã Gửi Yêu Cầu Lúc',
+    'successfully_update_request' => 'Cập Nhật Yêu Cầu Thành Công',
+    'wait_admin_approve_request' => 'Chờ quản trị viên phê duyệt yêu cầu của bạn',
+    'wallet_address_enter_same' => 'Địa Chỉ Ví Nhập Vào Giống Nhau',
+    'successfully_save_wallet_address' => 'Đã Lưu Địa Chỉ Ví Thành Công',
+    'current_pin_required' => 'Trường Mã PIN Rút Tiền Hiện Tại là bắt buộc.',
+    'new_withdrawal_pin' => 'Mã PIN Rút Tiền Mới',
+    'withdrawal_pin_confirmation' => 'Xác Nhận Mã PIN Rút Tiền',
+    'current_withdrawal_pin' => 'Mã PIN Rút Tiền Hiện Tại',
+    'current_pin_invalid' => 'Mã PIN Hiện Tại không hợp lệ',
+    'successfully_save_withdrawal_pin' => 'Đã Lưu Mã PIN Rút Tiền Thành Công',
+    'withdrawal_pin_invalid' => 'Mã PIN Rút Tiền không hợp lệ',
+    'successfully_submit_withdrawal_request' => 'Đã Gửi Yêu Cầu Rút Tiền Thành Công',
+    'fee_remark' => 'Có phí rút tiền là $5 (không bao gồm phí sàn giao dịch tiền mã hóa)',
+
+    'success' => 'Thành Công!',
+    'link_copied' => 'Đã Sao Chép Liên Kết',
+    'to_withdraw' => 'Để Rút Tiền:',
+    'setup_usdt_wallet' => 'Cài Đặt Ví USDT',
+    'click_here_to_set_up_usdt_wallet' => 'Nhấp vào đây để cài đặt Ví USDT',
+    'setup_withdrawal_pin' => 'Cài Đặt Mã PIN Rút Tiền',
+    'click_here_to_set_up_withdrawal_pin' => 'Nhấp vào đây để cài đặt Mã PIN Rút Tiền',
+    'profile_verified' => 'Xác Minh Hồ Sơ',
+    'pending_kyc' => 'Xác Minh KYC Đang Chờ',
+
+    'pamm' => 'PAMM',
+    'add_pamm' => 'Thêm PAMM',
+    'update_pamm' => 'Cập Nhật PAMM',
+    'pamm_id' => 'Lựa chọn PAMM không hợp lệ',
+    'code' => 'Mã',
+    'successfully_added_pamm' => 'Đã Thêm PAMM Thành Công',
+    'successfully_updated_pamm' => 'Đã Cập Nhật PAMM Thành Công',
+    'successfully_deleted_pamm' => 'Đã Xóa PAMM Thành Công',
+    'select_pamm' => 'Chọn PAMM',
+
+    'world_pool' => 'Hồ Bơi Thế Giới',
+    'pool_type' => 'Loại Hồ Bơi',
+    'total_lot' => 'Tổng Lô',
+    'net_lot' => 'Lô Ròng',
+    'pool_commission' => 'Hoa Hồng Hồ Bơi',
+    'pool_amount' => 'Số Tiền Hồ Bơi',
+    'start_time' => 'Thời Gian Bắt Đầu',
+    'end_time' => 'Thời Gian Kết Thúc',
+    'history' => 'Lịch Sử Giao Dịch',
+
+    'six_digit' => 'Mã PIN 6 Chữ Số',
+    'click_to_get_reset_link' => 'Nhấp để nhận liên kết đặt lại',
+    'reset_link_expired' => 'Liên Kết Đặt Lại Hết Hạn',
+
+    'summary' => 'Tóm Tắt',
+    'network_summary' => 'Tóm Tắt Mạng',
+
+    'member_profile' => 'Hồ sơ thành viên',
+    'edited_detail' => 'Chi tiết Chỉnh sửa',
+    'lowest_rank' => 'Xếp hạng thấp nhất',
+
+    'investment' => 'Đầu tư',
+    'investment_plan' => 'Kế hoạch đầu tư',
+    'portfolio' => 'Bộ sưu tập đầu tư',
+    'add_portfolio' => 'Thêm bộ sưu tập đầu tư',
+    'update_portfolio' => 'Cập nhật bộ sưu tập đầu tư',
+    'portfolio_listing' => 'Danh sách bộ sưu tập đầu tư',
+    'min_amount' => 'Số tiền tối thiểu',
+    'successfully_added_portfolio' => 'Thêm danh mục thành công',
+    'successfully_updated_portfolio' => 'Cập nhật danh mục thành công',
+    'successfully_deleted_portfolio' => 'Xóa danh mục thành công',
+    'detail' => 'Chi tiết',
+    'processing' => 'Đang xử lý',
+    'successfully_submitted_deposit_request' => 'Gửi yêu cầu nạp tiền thành công',
+    'successfully_approved_deposit' => 'Phê duyệt nạp tiền thành công',
+    'successfully_rejected_deposit' => 'Từ chối nạp tiền thành công',
+
+    'download_app' => 'Tải ứng dụng',
+    'app_note' => 'Lưu ý: Ứng dụng của chúng tôi hiện chỉ có sẵn cho điện thoại Android. Phiên bản iOS đang được phát triển tích cực và sẽ sớm ra mắt. Cảm ơn bạn đã hiểu và ủng hộ!',
+)
+?>
