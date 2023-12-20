@@ -27,8 +27,8 @@
     <form class="mt-6" action="{{ route('referral_transfer') }}" method="post">
         @csrf
         <div class="flex gap-12">
-            <div class="w-full max-w-sm p-4 bg-[#FDFCF3] border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 flex-1">
-                <h5 class="mb-3 text-base font-semibold text-[#FFA168] md:text-xl dark:text-white">
+            <div class="w-full max-w-sm p-4 bg-blue-100 border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 flex-1">
+                <h5 class="mb-3 text-base font-semibold text-[#3F83F8] md:text-xl dark:text-white">
                     @lang('public.choose_customer')
                 </h5>
                 <p class="text-sm font-normal text-gray-500 dark:text-gray-400">@lang('public.search_choose_transfer')</p>
@@ -40,8 +40,8 @@
                     </select>
                 </div>
             </div>
-            <div class="w-full max-w-sm p-4 bg-[#FDFCF3] border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 flex-1">
-                <h5 class="mb-3 text-base font-semibold text-[#FFA168] md:text-xl dark:text-white">
+            <div class="w-full max-w-sm p-4 bg-blue-100 border border-gray-200 rounded-lg shadow sm:p-6 dark:bg-gray-800 dark:border-gray-700 flex-1">
+                <h5 class="mb-3 text-base font-semibold text-[#3F83F8] md:text-xl dark:text-white">
                     @lang('public.choose_customer')
                 </h5>
                 <p class="text-sm font-normal text-gray-500 dark:text-gray-400">@lang('public.search_choose_transfer')</p>

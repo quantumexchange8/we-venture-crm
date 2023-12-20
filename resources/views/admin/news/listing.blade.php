@@ -15,7 +15,7 @@
                     <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                         <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                     </div>
-                    <input type="text" id="search" class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-blue-500" placeholder="@lang('public.search_name')" name="freetext" value="{{ @$search['freetext'] }}">
+                    <input type="text" id="search" class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="@lang('public.search_name')" name="freetext" value="{{ @$search['freetext'] }}">
                 </div>
                 <div class="max-[755px]:flex max-[755px]:flex-col gap-2">
                     <button type="submit" class="text-white bg-primary hover:bg-primary-600 border border-primary-200 focus:ring-4 focus:outline-none focus:ring-primary-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800" name="submit" value="search">@lang('public.search')</button>
@@ -36,7 +36,7 @@
     @if($news_all->isNotEmpty())
         <div class="relative overflow-x-auto mt-2 text-sm">
             <table class="w-full text-black text-left dark:text-gray-400 table-auto">
-                <thead class="uppercase bg-[#F6F6F6]">
+                <thead class="uppercase bg-blue-100">
                 <tr>
                     <th class="px-6 py-3 text-md font-bold" style="width: 20%">
                         @lang('public.date_created')
@@ -54,7 +54,7 @@
                 </thead>
                 <tbody>
                     @foreach($news_all as $news)
-                        <tr class="border-b odd:bg-[#FDFCF3] even:bg-[#F6F6F6]">
+                        <tr class="border-b odd:bg-[#FFFFFF] even:bg-blue-100">
                             <td class="px-6 py-4 ">
                                 {{ $news->created_at }}
                             </td>
@@ -104,7 +104,7 @@
             </div>
         </div>
     @else
-        <div class="flex p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
+        <div class="flex p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-300" role="alert">
             <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
             <span class="sr-only">@lang('public.info')</span>
             <div>

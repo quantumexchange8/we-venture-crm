@@ -3,16 +3,16 @@
 @section('title') Change Password @endsection
 
 @section('contents')
-    <div class="block p-6 shadow-lg bg-[#FDFCF3] max-w-lg mx-auto">
+    <div class="block p-6 shadow-lg bg-blue-100 max-w-lg mx-auto">
         <a href="{{ url('member/dashboard') }}">
-            <img class ="h-20 mx-auto my-6" src="{{url('/img/CW.png')}}">
+            <img class ="h-20 mx-auto my-6" src="{{url('/img/WV-icon.png')}}">
         </a>
         <p class="font-semibold m-6 text-center text-lg text-gray-700">@lang('public.tree_verification')</p>
         <form method="post" action="{{ route('tree_verification', $type) }}">@csrf
             <div class="form-group mb-6">
-                <label for="current_password" class="form-label inline-block mb-2 text-orange-400 font-semibold">@lang('public.enter_password')</label>
+                <label for="current_password" class="form-label inline-block mb-2 text-blue-500 font-semibold">@lang('public.enter_password')</label>
                 <div class="relative mb-2">
-                    <input type="password" id="current_password" name="current_password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500 @error('current_password') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror" placeholder="@lang('public.enter_password')">
+                    <input type="password" id="current_password" name="current_password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @error('current_password') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror" placeholder="@lang('public.enter_password')">
                     <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-auto">
                         <button id='current_pass_button' type="button" class="text-gray-400 bg-transparent hover:text-gray-900 rounded-lg text-sm  ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5" id="pass_current_svg">
@@ -30,21 +30,21 @@
             w-full
             px-6
             py-2.5
-            bg-orange-400
+            bg-blue-500
             text-white
             font-medium
             text-sm
             leading-tight
             rounded
             shadow-md
-            hover:bg-orange-700 hover:shadow-lg
-            focus:bg-orange-700 focus:shadow-lg focus:outline-none focus:ring-0
-            active:bg-orange-800 active:shadow-lg
+            hover:bg-blue-700 hover:shadow-lg
+            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+            active:bg-blue-800 active:shadow-lg
             transition
             duration-150
             ease-in-out">@lang('public.verify')</button>
             <p class="text-gray-800 mt-6 text-center">
-                <a href="{{ url('member/dashboard')}}" class="text-orange-500 hover:text-orange-700 focus:text-orange-700 transition duration-200 ease-in-out hover:underline">@lang('public.back')</a>
+                <a href="{{ url('member/dashboard')}}" class="text-blue-500 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out hover:underline">@lang('public.back')</a>
             </p>
         </form>
     </div>

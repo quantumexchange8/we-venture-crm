@@ -19,11 +19,11 @@
                                     <header>
                                         <div class="flex mb-2">
                                             <a class="relative inline-flex items-start mr-5" target="_blank" href="{{ route('member_details', @$record->user->id) }}">
-                                                <div class="relative inline-flex items-center justify-center w-20 h-20 overflow-hidden bg-orange-400 rounded-full dark:bg-gray-600">
+                                                <div class="relative inline-flex items-center justify-center w-20 h-20 overflow-hidden bg-blue-400 rounded-full dark:bg-gray-600">
                                                     @if (@$record->user->profile_image)
-                                                        <img src="{{ asset('uploads/users/' .@$record->user->profile_image)}}" id="profile_pic_preview" class="relative inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-orange-400 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
+                                                        <img src="{{ asset('uploads/users/' .@$record->user->profile_image)}}" id="profile_pic_preview" class="relative inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-blue-400 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
                                                     @else
-                                                        <img src="{{url('/img/profile.png')}}" id="profile_pic_preview" class="relative inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-orange-400 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
+                                                        <img src="{{url('/img/profile.png')}}" id="profile_pic_preview" class="relative inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-blue-400 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
                                                     @endif
                                                 </div>
                                                 <div class="mt-4 ml-2 pr-1">

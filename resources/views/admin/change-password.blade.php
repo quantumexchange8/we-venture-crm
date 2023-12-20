@@ -8,18 +8,18 @@
     <div class="flex flex-row">
         <h1 class="flex-1 font-semibold text-2xl text-gray-500">@lang('public.profile')
             / @lang('public.change_password')</h1>
-        <a href="{{ route('admin_dashboard') }}" class="text-xl font-semibold text-[#FFA168]">@lang('public.back')</a>
+        <a href="{{ route('admin_dashboard') }}" class="text-xl font-semibold text-[#3F83F8]">@lang('public.back')</a>
     </div>
 
-    <div class="block p-6 shadow-lg bg-[#FDFCF3] max-w-lg mx-auto mt-8">
+    <div class="block p-6 shadow-lg bg-blue-100 max-w-lg mx-auto mt-8">
         <form method="post" action="{{ route('admin_change_password') }}">
             @csrf
             <div class="form-group mb-6">
                 <label for="current_password"
-                       class="form-label inline-block mb-2 text-orange-400 font-semibold">@lang('public.current_password')</label>
+                       class="form-label inline-block mb-2 text-blue-500 font-semibold">@lang('public.current_password')</label>
                 <div class="relative mb-2">
                     <input type="password" id="current_password" name="current_password"
-                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500 @error('current_password') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror"
+                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @error('current_password') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror"
                            placeholder="@lang('public.current_password')">
                     <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-auto">
                         <button id='current_pass_button' type="button"
@@ -39,7 +39,7 @@
                 @enderror
             </div>
             <div class="form-group mb-6">
-                <label for="newPassword" class="flex block mb-2 font-semibold text-orange-400">
+                <label for="newPassword" class="flex block mb-2 font-semibold text-blue-500">
                     @lang('public.new_password')
                     <button data-popover-target="popover-description" data-popover-placement="bottom-start"
                             type="button">
@@ -63,7 +63,7 @@
                 </label>
                 <div class="relative mb-2">
                     <input type="password" id="newPassword" name="password"
-                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500 @error('password') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror"
+                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @error('password') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror"
                            placeholder="@lang('public.new_password')">
                     <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-auto">
                         <button id='pass_button' type="button"
@@ -87,10 +87,10 @@
             </div>
             <div class="form-group mb-6">
                 <label for="reenterNewPassword"
-                       class="form-label inline-block mb-2 text-orange-400 font-semibold">@lang('public.confirm_password')</label>
+                       class="form-label inline-block mb-2 text-blue-500 font-semibold">@lang('public.confirm_password')</label>
                 <div class="relative mb-6">
                     <input type="password" id="reenterNewPassword" name="password_confirmation"
-                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange- @error('password') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror"
+                           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue- @error('password') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror"
                            placeholder="@lang('public.confirm_password')">
                     <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-auto">
                         <button id='pass_confirm_button' type="button"
@@ -112,16 +112,16 @@
             w-full
             px-6
             py-2.5
-            bg-orange-400
+            bg-blue-500
             text-white
             font-medium
             text-sm
             leading-tight
             rounded
             shadow-md
-            hover:bg-orange-700 hover:shadow-lg
-            focus:bg-orange-700 focus:shadow-lg focus:outline-none focus:ring-0
-            active:bg-orange-800 active:shadow-lg
+            hover:bg-blue-700 hover:shadow-lg
+            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+            active:bg-blue-800 active:shadow-lg
             transition
             duration-150
             ease-in-out">@lang('public.change_password')</button>

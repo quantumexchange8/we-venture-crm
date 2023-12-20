@@ -8,7 +8,7 @@
                 <span class="sr-only">@lang('public.close_modal')</span>
             </button>
             <div class="px-6 py-6 lg:px-8">
-                <h3 class="mb-4 text-xl font-semibold text-orange-500 dark:text-white">@lang('public.withdrawal_as_USDT')</h3>
+                <h3 class="mb-4 text-xl font-semibold text-blue-500 dark:text-white">@lang('public.withdrawal_as_USDT')</h3>
                 <form method="post" action="{{ route('withdrawal-edit') }}" enctype="multipart/form-data" id="edit-withdrawal">
                     @csrf
 
@@ -20,7 +20,7 @@
                             </label>
                             <input type="text" name="balance" id="balance" aria-label="disabled input 1" disabled
                                    readonly value="{{number_format($user->wallet_balance, 2)}} USDT"
-                                   class="bg-gray-50 border border-gray-300 text-orange-500 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white balance"
+                                   class="bg-gray-50 border border-gray-300 text-blue-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white balance"
                                    required>
                             <span class="text-danger text-xs error-text balance_error"></span>
                         </div>
@@ -32,10 +32,10 @@
                                 <input type="number" name="amount" id="amount-wallet-edit" value="{{ $data->amount }}"
                                        step="0.01" min="0"
                                        placeholder="@lang('public.min_amount') $ 10"
-                                       class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500 amount"
+                                       class="block w-full p-4 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 amount"
                                        >
                                 <button type="button" id="max-button-edit"
-                                        class="text-white absolute right-2.5 bottom-2.5 bg-orange-500 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">
+                                        class="text-white absolute right-2.5 bottom-2.5 bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                                     @lang('public.max')
                                 </button>
                             </div>
@@ -48,7 +48,7 @@
                             </label>
                             <input type="text" name="fee" id="fee-edit" readonly aria-label="disabled input 2"
                                    value="{{number_format($transaction_fee,2)}} USDT"
-                                   class="bg-gray-50 border border-gray-300 text-orange-500 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
+                                   class="bg-gray-50 border border-gray-300 text-blue-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"
                                    required>
                             <div class="text-sm text-center">@lang('public.fee_remark')</div>
                         </div>
@@ -56,11 +56,11 @@
                             <label for="withdrawal_pin" class="block mb-2 text-sm font-semibold text-gray-900 dark:text-white">
                                 @lang('public.withdrawal_pin')
                             </label>
-                            <input type="password" name="withdrawal_pin" id="withdrawal_pin" aria-label="disabled input 2" class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter Pin">
+                            <input type="password" name="withdrawal_pin" id="withdrawal_pin" aria-label="disabled input 2" class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Enter Pin">
                             <span class="text-danger text-xs error-text withdrawal_pin_error"></span>
                         </div>
 
-                        <div class="text-center font-medium text-md mt-2 text-orange-500  dark:text-orange-700">
+                        <div class="text-center font-medium text-md mt-2 text-blue-500  dark:text-blue-700">
                             @lang('public.withdrawal_total')
                         </div>
                         <button type="submit" id="total-edit"

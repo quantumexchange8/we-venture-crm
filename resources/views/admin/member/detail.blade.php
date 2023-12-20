@@ -34,21 +34,21 @@
 
     </div>
     <div class="flex justify-center mt-8">
-        <div class="grid grid-cols-4 items-start rounded-xl bg-[#FDFCF3] p-4 shadow-lg w-full max-[1150px]:grid-cols-3">
+        <div class="grid grid-cols-4 items-start rounded-xl bg-blue-100 p-4 shadow-lg w-full max-[1150px]:grid-cols-3">
 
-            <div class="col-span-1 flex-col items-center py-8 border-r-4 border-orange-500 h-full px-12 text-center max-[1150px]:col-span-3 max-[1150px]:border-none">
-                <div class="relative inline-flex items-center justify-center w-20 h-20 overflow-hidden bg-orange-400 rounded-full dark:bg-gray-600">
+            <div class="col-span-1 flex-col items-center py-8 border-r-4 border-blue-600 h-full px-12 text-center max-[1150px]:col-span-3 max-[1150px]:border-none">
+                <div class="relative inline-flex items-center justify-center w-20 h-20 overflow-hidden bg-blue-500 rounded-full dark:bg-gray-600">
                     @if ($user->profile_image)
-                        <img src="{{ asset('uploads/users/' .$user->profile_image)}}" id="profile_pic_preview" class="relative inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-orange-400 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
+                        <img src="{{ asset('uploads/users/' .$user->profile_image)}}" id="profile_pic_preview" class="relative inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-blue-500 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
                     @else
-                        <img src="{{url('/img/profile.png')}}" id="profile_pic_preview" class="relative inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-orange-400 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
+                        <img src="{{url('/img/profile.png')}}" id="profile_pic_preview" class="relative inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-blue-500 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
                     @endif
 
                 </div>
                 <h5 class="font-bold text-lg text-gray-600 text-center mt-4 mb-2">{{ $user->name }}</h5>
-                <span class="font-semibold text-lg text-orange-400 text-center">{{ $user->rank->rank_short_form }}</span>
+                <span class="font-semibold text-lg text-blue-500 text-center">{{ $user->rank->rank_short_form }}</span>
                 <div class="items-center mt-4 md:mt-6">
-                    <p class="font-semibold text-md text-orange-400 mt-4">@lang('public.last_rank_up'):</p>
+                    <p class="font-semibold text-md text-blue-500 mt-4">@lang('public.last_rank_up'):</p>
                     <div class="font-semibold text-sm text-gray-600">
                         <p class="mb-2">
                             {{\Carbon\Carbon::parse($user->rank_update_at)->format('Y-m-d')}}
@@ -61,7 +61,7 @@
                 <div class="flex mt-4 space-x-3 md:mt-6">
                     <button
                         data-modal-target="ranking_details_modal" data-modal-toggle="ranking_details_modal"
-                        class="mx-auto inline-flex items-center px-8 py-2 text-center text-white bg-[#FFA168] rounded-lg hover:bg-orange-400 focus:ring-4 focus:outline-none focus:ring-orange-300"
+                        class="mx-auto inline-flex items-center px-8 py-2 text-center text-white bg-[#3F83F8] rounded-lg hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300"
                         data-te-ripple-init
                         data-te-ripple-color="light">
                         @lang('public.rank_details')
@@ -72,25 +72,25 @@
             <div class="col-span-3 ml-4 p-4 md:mt-6">
                 <div class="grid grid-cols-2 gap-4 break-words max-[800px]:grid-cols-1">
                     <div class="px-4">
-                        <h2 class="font-semibold text-md text-orange-400 mb-4">@lang('public.email')</h2>
+                        <h2 class="font-semibold text-md text-blue-500 mb-4">@lang('public.email')</h2>
                         <span class="font-semibold text-md text-gray-500">
                             {{ $user->email }}
                         </span>
                     </div>
                     <div class="px-4">
-                        <h2 class="font-semibold text-md text-orange-400 mb-4">@lang('public.contact')</h2>
+                        <h2 class="font-semibold text-md text-blue-500 mb-4">@lang('public.contact')</h2>
                         <span class="font-semibold text-md text-gray-500">
                             {{ $user->contact_number }}
                         </span>
                     </div>
                     <div class="mt-6 px-4">
-                        <h2 class="font-semibold text-md text-orange-400 mb-4">@lang('public.address')</h2>
+                        <h2 class="font-semibold text-md text-blue-500 mb-4">@lang('public.address')</h2>
                         <span class="font-semibold text-md text-gray-500">
                             {{ $user->address }}
                         </span>
                     </div>
                     <div class="mt-6 px-4">
-                        <h2 class="font-semibold text-md text-orange-400 mb-4">@lang('public.country')</h2>
+                        <h2 class="font-semibold text-md text-blue-500 mb-4">@lang('public.country')</h2>
                         <span class="font-semibold text-md text-gray-500">
                             @switch(app()->getLocale())
                                 @case('en')
@@ -111,13 +111,13 @@
                         </span>
                     </div>
                     <div class="mt-6 px-4">
-                        <h2 class="font-semibold text-md text-orange-400 mb-4">@lang('public.date_join')</h2>
+                        <h2 class="font-semibold text-md text-blue-500 mb-4">@lang('public.date_join')</h2>
                         <span class="font-semibold text-md text-gray-500">
                             {{ $user->created_at }}
                         </span>
                     </div>
                     <div class="mt-6 px-4">
-                        <h2 class="font-semibold text-md text-orange-400 mb-4">@lang('public.status')</h2>
+                        <h2 class="font-semibold text-md text-blue-500 mb-4">@lang('public.status')</h2>
                         @if($user->status == 1)
                             <span class="text-success font-semibold text-md text-gray-500">@lang('public.active')</span>
                         @elseif($user->status == 2)
@@ -127,46 +127,20 @@
                         @endif
                     </div>
                     <div class="mt-6 px-4">
-                        <h2 class="font-semibold text-md text-orange-400 mb-4">@lang('public.leader_status')</h2>
+                        <h2 class="font-semibold text-md text-blue-500 mb-4">@lang('public.leader_status')</h2>
                         <span class="font-semibold text-md text-gray-500">
                             {{ $user->leader_status ? trans('public.yes') : trans('public.no') }}
                         </span>
                     </div>
+                    
                     <div class="mt-6 px-4">
-                        <form action="{{ route('member_kyc_approval') }}" method="post">
-                            @csrf
-                            <h2 class="font-semibold text-md text-orange-400 mb-2">@lang('public.kyc_approval_status')</h2>
-                            <span class="font-semibold text-md text-gray-500">
-                                @if($user->kyc_approval_status == 3)
-                                    <span class="text-success font-semibold mr-2 mb-2 uppercase">@lang('public.kyc_verified')</span>
-                                @elseif($user->kyc_approval_status == 2)
-                                    <span class="text-warning font-semibold mr-2 mb-2 uppercase">@lang('public.kyc_pending_verify')</span>
-                                @elseif($user->kyc_approval_status == 4)
-                                    <span class="text-danger font-semibold mr-2 mb-2 uppercase">@lang('public.reject')</span>
-                                @elseif($user->kyc_approval_status == 1)
-                                    <span class="text-danger font-semibold mr-2 mb-2 uppercase">@lang('public.kyc_not_verify')</span>
-                                @endif
-                            </span>
-                            @if($user->kyc_approval_status != App\Models\User::KYC_STATUS_VERIFIED)
-                                <input type="hidden" name="user_id" value="{{ $user->id }}">
-                                <input type="hidden" name="direct_approve" value="direct_approve">
-                                <button type="submit" name="approval" value="{{App\Models\User::KYC_STATUS_VERIFIED}}" class="text-white bg-success hover:bg-success-500 focus:ring-4 focus:outline-none focus:ring-success-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center mr-2 dark:bg-success-600 dark:hover:bg-success-700 dark:focus:ring-success-800">
-                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 mr-2 -ml-1">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                                    </svg>
-                                    @lang('public.approve')
-                                </button>
-                            @endif
-                        </form>
-                    </div>
-                    <div class="mt-6 px-4">
-                        <h2 class="font-semibold text-md text-orange-400 mb-4">@lang('public.email_status')</h2>
+                        <h2 class="font-semibold text-md text-blue-500 mb-4">@lang('public.email_status')</h2>
                         <span class="font-semibold text-md text-gray-500">
                             {{ $user->email_status == 1 ? trans('public.yes') : trans('public.no') }}
                         </span>
                     </div>
                     <div class="mt-6 px-4">
-                        <h2 class="font-semibold text-md text-orange-400 mb-4">@lang('public.wallet_status')</h2>
+                        <h2 class="font-semibold text-md text-blue-500 mb-4">@lang('public.wallet_status')</h2>
                         @if($user->user_wallet && $user->user_wallet->wallet_status == \App\Models\UserWallet::STATUS_ACTIVE)
                             <span class="text-success font-semibold text-md text-gray-500">@lang('public.active')</span>
                         @else
@@ -175,7 +149,7 @@
                     </div>
                     @if($user->extra_bonus)
                         <div class="mt-6 px-4">
-                            <h2 class="font-semibold text-md text-orange-400 mb-4">@lang('public.extra_bonus')</h2>
+                            <h2 class="font-semibold text-md text-blue-500 mb-4">@lang('public.extra_bonus')</h2>
                             <span class="font-semibold text-md text-gray-500">
                                 $ {{ $user->extra_bonus->bonus_amount }}
                             </span>
@@ -213,22 +187,22 @@
                             {{ $user->name }}
                         </div>
                         <div class="mb-6">
-                            <label for="rank" class="block mb-2 text-lg text-[#FFA168]">@lang('public.change_rank')</label>
-                            {!! Form::select('rankId', $get_rank_sel, $post->rankId, ['class' => 'bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500', 'id' => 'rank_sel']) !!}
+                            <label for="rank" class="block mb-2 text-lg text-[#3F83F8]">@lang('public.change_rank')</label>
+                            {!! Form::select('rankId', $get_rank_sel, $post->rankId, ['class' => 'bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500', 'id' => 'rank_sel']) !!}
                         </div>
                         <div class="mb-6">
                             <label class="relative inline-flex items-center cursor-pointer">
                                 <input type="checkbox" name="auto_rank_up" id="autoRankSwitch" value="on" class="sr-only peer" @if( @$post->auto_rank_up == 1 ) checked @endif>
-                                <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-gray-200 dark:peer-focus:ring-orange-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#FFA168]"></div>
+                                <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-focus:ring-4 peer-focus:ring-gray-200 dark:peer-focus:ring-blue-800 dark:bg-gray-700 peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#3F83F8]"></div>
                                 <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">@lang('public.auto_rank_up')</span>
                             </label>
                         </div>
                         <div class="mb-6">
-                            <label for="lowest_rank" class="block mb-2 text-lg text-[#FFA168]">@lang('public.lowest_rank')</label>
-                            {!! Form::select('lowest_rank', $get_rank_sel, $post->lowest_rank, ['class' => 'bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500', 'id' => 'lowest_rank']) !!}
+                            <label for="lowest_rank" class="block mb-2 text-lg text-[#3F83F8]">@lang('public.lowest_rank')</label>
+                            {!! Form::select('lowest_rank', $get_rank_sel, $post->lowest_rank, ['class' => 'bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500', 'id' => 'lowest_rank']) !!}
                         </div>
                         <div class="text-center">
-                            <button type="submit" class="text-white bg-[#FFA168] hover:bg-orange-400 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm w-full sm:w-auto px-10 py-2.5 text-center dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800 inline-flex items-center justify-center">@lang('public.confirm')</button>
+                            <button type="submit" class="text-white bg-[#3F83F8] hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-10 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 inline-flex items-center justify-center">@lang('public.confirm')</button>
                         </div>
                     </form>
                 </div>
@@ -252,17 +226,17 @@
                         </div>
                         <div>
                             <label for="old_balance" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.wallet_balance')</label>
-                            <input type="text" name="old_balance" id="old_balance" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="{{ number_format($user->wallet_balance, 2) }}" disabled>
+                            <input type="text" name="old_balance" id="old_balance" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="{{ number_format($user->wallet_balance, 2) }}" disabled>
                         </div>
                         <div>
                             <label for="adjust_amount" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.adjustment_amount')</label>
-                            <input type="number" min="0" step='0.01' name="adjust_amount" id="adjust_amount" placeholder="0.00" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
+                            <input type="number" min="0" step='0.01' name="adjust_amount" id="adjust_amount" placeholder="0.00" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" required>
                         </div>
                         <div>
                             <label for="adjust_remark" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.adjustment_remark')</label>
-                            <textarea  name="adjust_remark" id="adjust_remark" placeholder="Leave your remark here!" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"></textarea>
+                            <textarea  name="adjust_remark" id="adjust_remark" placeholder="Leave your remark here!" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white"></textarea>
                         </div>
-                        <button type="submit" class="w-full text-white bg-orange-400 hover:bg-orange-400 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">@lang('public.submit')</button>
+                        <button type="submit" class="w-full text-white bg-blue-500 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">@lang('public.submit')</button>
                     </form>
                 </div>
             </div>
@@ -287,14 +261,14 @@
                         </div>
                         <div>
                             <label for="old_balance" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.user')</label>
-                            <input type="text" name="old_balance" id="old_balance" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="{{ $user->name }}" disabled>
+                            <input type="text" name="old_balance" id="old_balance" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="{{ $user->name }}" disabled>
                         </div>
                         <div>
                             <label for="bonus_amount" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.amount')</label>
-                            <input type="number" min="0" step='0.01' name="bonus_amount" id="bonus_amount" placeholder="0.00" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                            <input type="number" min="0" step='0.01' name="bonus_amount" id="bonus_amount" placeholder="0.00" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                             <span class="text-danger text-xs error-text bonus_amount_error"></span>
                         </div>
-                        <button type="submit" class="w-full text-white bg-orange-400 hover:bg-orange-400 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">@lang('public.submit')</button>
+                        <button type="submit" class="w-full text-white bg-blue-500 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">@lang('public.submit')</button>
                     </form>
                 </div>
             </div>

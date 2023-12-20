@@ -10,7 +10,7 @@
 
     <div class="flex flex-row">
         <h1 class="flex-1 font-semibold text-2xl text-gray-500">@lang('public.investment') / {{ ($title)== 'Add' ? trans('public.add_portfolio') : trans('public.update_portfolio') }} </h1>
-        <a href="{{ route('portfolio_listing') }}" class="text-xl font-semibold text-[#FFA168]">@lang('public.back')</a>
+        <a href="{{ route('portfolio_listing') }}" class="text-xl font-semibold text-[#3F83F8]">@lang('public.back')</a>
     </div>
     <div class="bg-white rounded shadow-lg p-6">
         <form action="{{ $submit }}" method="post">
@@ -30,8 +30,8 @@
                         @foreach(config('translatable.locales') as $locale)
                             <div class="tab-content hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800" id="{{ $locale }}" role="tabpanel" aria-labelledby="{{ $locale }}-tab">
                                 <div class="mb-6">
-                                    <label for="name[{{ $locale }}]" class="block mb-2 font-bold text-[#FFA168] dark:text-white">@lang('public.title') ( @lang('public.'.$locale ) )</label>
-                                    <input type="text" id="name[{{ $locale }}]" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @error($locale.'.name') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror" placeholder="@lang('public.title') ( @lang('public.'.$locale ) )" name="{{ $locale }}[name]"
+                                    <label for="name[{{ $locale }}]" class="block mb-2 font-bold text-[#3F83F8] dark:text-white">@lang('public.title') ( @lang('public.'.$locale ) )</label>
+                                    <input type="text" id="name[{{ $locale }}]" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @error($locale.'.name') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror" placeholder="@lang('public.title') ( @lang('public.'.$locale ) )" name="{{ $locale }}[name]"
                                            @if($title == 'Add')
                                                value="{{ @$post->$locale['name'] }}"
                                            @else
@@ -43,7 +43,7 @@
                                     @enderror
                                 </div>
                                 <div class="mb-6">
-                                    <label for="description-{{ $locale }}" class="block mb-2 font-bold text-[#FFA168] dark:text-white">@lang('public.description') ( @lang('public.'.$locale ) )</label>
+                                    <label for="description-{{ $locale }}" class="block mb-2 font-bold text-[#3F83F8] dark:text-white">@lang('public.description') ( @lang('public.'.$locale ) )</label>
 
                                     <textarea id="description-{{ $locale }}" class="summernote" name="{{ $locale }}[description]">@if($title == 'Add'){!! @$post->$locale['description'] !!}@else{!! @$post->translate($locale)->description !!}@endif</textarea>
                                     @error($locale.'.description')
@@ -56,15 +56,15 @@
                 </div>
                 <div class="mt-12 space-y-6">
                     <div class="space-y-2">
-                        <label for="min_amount" class="block mb-2 font-bold text-[#FFA168] dark:text-white">@lang('public.min_amount')</label>
-                        <input type="number" step=".01" id="min_amount" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @error('min_amount') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror" placeholder="0.00" name="min_amount" value="{{ @$post->min_amount }}"
+                        <label for="min_amount" class="block mb-2 font-bold text-[#3F83F8] dark:text-white">@lang('public.min_amount')</label>
+                        <input type="number" step=".01" id="min_amount" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-400 focus:border-blue-400 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @error('min_amount') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror" placeholder="0.00" name="min_amount" value="{{ @$post->min_amount }}"
                         >
                         @error('min_amount')
                         <div class="mt-2 text-sm text-red-600">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="space-y-2">
-                        <label for="user" class="block font-bold text-[#FFA168] dark:text-white">@lang('public.user')</label>
+                        <label for="user" class="block font-bold text-[#3F83F8] dark:text-white">@lang('public.user')</label>
                         <select class="js-example-basic-multiple w-full" id="user" name="user[]" multiple="multiple">
                             @foreach($users as $user)
                                 <option @if(in_array($user->id, old('user', json_decode(@$post->selected_users) ?? []))) selected @endif value="{{ $user->id }}">{{ $user->name }}</option>
@@ -75,10 +75,10 @@
                         @enderror
                     </div>
                     <div class="space-y-2">
-                        <label for="status" class="block mb-2 font-bold text-[#FFA168] dark:text-white">@lang('public.status')</label>
+                        <label for="status" class="block mb-2 font-bold text-[#3F83F8] dark:text-white">@lang('public.status')</label>
                         <label class="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" name="status" value="active" class="sr-only peer" @if(@$post->status == 'active') checked @endif>
-                            <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#FFA168]"></div>
+                            <div class="w-11 h-6 bg-gray-200 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-0.5 after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-[#3F83F8]"></div>
                             <span class="ml-3 text-sm font-medium text-gray-900 dark:text-gray-300">@lang('public.active')</span>
                         </label>
                     </div>

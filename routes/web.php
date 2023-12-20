@@ -65,7 +65,7 @@ Route::namespace('Web')->middleware('jwt.set')->group(function () {
                 Route::post('/withdrawal_pin', 'withdrawal_pin')->name('withdrawal_pin');
                 Route::post('/send_withdrawal_reset_link', 'send_withdrawal_reset_link')->name('send_withdrawal_reset_link');
                 Route::match(['get', 'post'], '/withdrawal_pin_reset', 'withdrawal_pin_reset')->name('withdrawal_pin_reset');
-                Route::match(['get', 'post'], '/verification', 'verification')->name('member_verification');
+                // Route::match(['get', 'post'], '/verification', 'verification')->name('member_verification');
                 Route::match(['get', 'post'], '/downline_listing', 'downline_listing')->name('member_downline_listing')->middleware('tree.verification');
                 Route::get('/account/{id}', 'account')->name('view_member_profile');
                 Route::post('/export-network', 'exportExcel');
@@ -118,8 +118,8 @@ Route::namespace('Web')->middleware('jwt.set')->group(function () {
 
             Route::controller('MemberController')->prefix('member')->group(function () {
                 Route::match(['get', 'post'], '/listing', 'member_listing')->name('member_listing');
-                Route::match(['get', 'post'], '/kyc-listing', 'member_kyc_listing')->name('member_kyc_listing');
-                Route::post('/kyc-approval', 'approval')->name('member_kyc_approval');
+                // Route::match(['get', 'post'], '/kyc-listing', 'member_kyc_listing')->name('member_kyc_listing');
+                // Route::post('/kyc-approval', 'approval')->name('member_kyc_approval');
                 Route::match(['get', 'post'], '/add', 'member_add')->name('member_add');
                 Route::match(['get', 'post'], '/edit/{id}', 'member_edit')->name('member_edit');
                 Route::match(['get', 'post'], '/details/{id}', 'member_details')->name('member_details');

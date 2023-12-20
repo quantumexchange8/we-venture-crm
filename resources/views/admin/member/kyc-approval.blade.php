@@ -1,13 +1,13 @@
-@extends('layouts.master-admin')
+<!-- @extends('layouts.master-admin')
 
 @section('title')
     {{ $title }}
 @endsection
 
 @section('contents')
-    <h1 class="font-semibold text-2xl text-gray-500">@lang('public.members') / @lang('public.kyc_approval')</h1>
+    <h1 class="font-semibold text-2xl text-blue-500">@lang('public.members') / @lang('public.kyc_approval')</h1> -->
     <!-- search -->
-    <div class="flex flex-col">
+    <!-- <div class="flex flex-col">
         <form method="post" action="{{ route('member_kyc_listing') }}">
             @csrf
             <div class="grid gap-6 mb-6 mt-4 md:grid-cols-1">
@@ -22,7 +22,7 @@
                         </svg>
                     </div>
                     <input type="text" id="search"
-                           class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-blue-500"
+                           class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                            placeholder="@lang('public.search_email')" name="freetext"
                            value="{{ @$search['freetext'] }}">
                 </div>
@@ -44,7 +44,7 @@
             ?>
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-2 text-sm">
             <table class="w-full text-left">
-                <thead class="uppercase bg-[#FDFCF3]">
+                <thead class="uppercase bg-blue-100">
                 <tr>
                     <th scope="col" class="p-4 text-center">
                         #
@@ -122,7 +122,7 @@
                 </thead>
                 <tbody>
                 @foreach($records as $record)
-                    <tr class="border-b odd:bg-[#F6F6F6] even:bg-[#FDFCF3]">
+                    <tr class="border-b odd:bg-[#FFFFFF] even:bg-blue-100">
                         <th scope="row"
                             class="p-4 font-medium text-center uppercase text-gray-900 whitespace-nowrap dark:text-white">
                             {{ $no }}
@@ -146,15 +146,15 @@
                                     class="block text-blue-600 underline  bg-transparent focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                     type="button">
                                 @lang('public.view_id')
-                            </button>
+                            </button> -->
                             <!-- Main modal -->
-                            <div id="defaultModal-{{$record->id}}" tabindex="-1" aria-hidden="true"
+                            <!-- <div id="defaultModal-{{$record->id}}" tabindex="-1" aria-hidden="true"
                                  class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-auto">
-                                <div class="relative w-full h-2/3 max-w-4xl md:h-auto">
+                                <div class="relative w-full h-2/3 max-w-4xl md:h-auto"> -->
                                     <!-- Modal content -->
-                                    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                                    <!-- <div class="relative bg-white rounded-lg shadow dark:bg-gray-700"> -->
                                         <!-- Modal header -->
-                                        <div
+                                        <!-- <div
                                             class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
                                             <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
                                                 @lang('public.copy_id')
@@ -170,9 +170,9 @@
                                                 </svg>
                                                 <span class="sr-only">Close modal</span>
                                             </button>
-                                        </div>
+                                        </div> -->
                                         <!-- Modal body -->
-                                        <div class="p-6 space-y-6">
+                                        <!-- <div class="p-6 space-y-6">
                                             @if($record->front_id_image && $record->back_id_image)
                                                 <div class="grid grid-cols-2 gap-4">
                                                     <div class="flex justify-center item-center">
@@ -234,14 +234,14 @@
                         ?>
                 @endforeach
                 </tbody>
-            </table>
+            </table> -->
             <!-- pagination -->
-            <div class="m-4">
+            <!-- <div class="m-4">
                 {!! $records->links('pagination::tailwind') !!}
             </div>
         </div>
     @else
-        <div class="flex p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300"
+        <div class="flex p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-300"
              role="alert">
             <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20"
                  xmlns="http://www.w3.org/2000/svg">
@@ -254,11 +254,11 @@
                 <span class="font-medium">@lang('public.info') :</span>@lang('public.no_record')
             </div>
         </div>
-    @endif
+    @endif -->
 
 
     <!-- approval Modal -->
-    <div id="kyc_approval_modal" tabindex="-1"
+    <!-- <div id="kyc_approval_modal" tabindex="-1"
          class="fixed top-0 left-0 right-0 z-50 hidden p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] md:h-full">
         <div class="relative w-full h-full max-w-md md:h-auto">
             <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
@@ -310,4 +310,4 @@
         });
 
     </script>
-@endsection
+@endsection -->

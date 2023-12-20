@@ -122,6 +122,7 @@ class MemberController extends Controller
                     'country' => $request->input('country'),
                     'status' => $request->input('status'),
                     'leader_status' => $request->input('leader_status'),
+                    'kyc_approval_status' => 3
                 ]);
                 $user->setReferralId();
                 Alert::success(trans('public.done'), trans('public.successfully_added_member'));
@@ -538,63 +539,63 @@ class MemberController extends Controller
         return redirect()->route('member_listing');
     }
 
-    public function member_kyc_listing(Request $request)
-    {
-        $search = array();
+    // public function member_kyc_listing(Request $request)
+    // {
+    //     $search = array();
 
-        if ($request->isMethod('post')) {
-            $submit_type = $request->input('submit');
+    //     if ($request->isMethod('post')) {
+    //         $submit_type = $request->input('submit');
 
-            switch ($submit_type) {
-                case 'search':
-                    session(['member_kyc_search' => [
-                        'freetext' =>  $request->input('freetext'),
-                    ]]);
-                    break;
-                case 'reset':
-                    session()->forget('member_kyc_search');
-                    break;
-            }
-        }
+    //         switch ($submit_type) {
+    //             case 'search':
+    //                 session(['member_kyc_search' => [
+    //                     'freetext' =>  $request->input('freetext'),
+    //                 ]]);
+    //                 break;
+    //             case 'reset':
+    //                 session()->forget('member_kyc_search');
+    //                 break;
+    //         }
+    //     }
 
-        $search = session('member_kyc_search') ? session('member_kyc_search') : $search;
+    //     $search = session('member_kyc_search') ? session('member_kyc_search') : $search;
 
-        return view('admin.member.kyc-approval', [
-            'submit' => route('member_kyc_listing'),
-            'records' => User::get_record($search, true)->paginate(10),
-            'search' =>  $search,
-            'title' => 'KYC Approval'
-        ]);
-    }
+    //     return view('admin.member.kyc-approval', [
+    //         'submit' => route('member_kyc_listing'),
+    //         'records' => User::get_record($search, true)->paginate(10),
+    //         'search' =>  $search,
+    //         'title' => 'KYC Approval'
+    //     ]);
+    // }
 
-    public function approval(Request $request)
-    {
-        $user = User::find($request->input('user_id'));
-        $direct_approve = $request->input('direct_approve');
+    // public function approval(Request $request)
+    // {
+    //     $user = User::find($request->input('user_id'));
+    //     $direct_approve = $request->input('direct_approve');
 
-        if (!$direct_approve && $user->kyc_approval_status != User::KYC_STATUS_PENDING_VERIFICATION) {
-            Alert::warning(trans('public.invalid_action'), trans('public.invalid_status'));
+    //     if (!$direct_approve && $user->kyc_approval_status != User::KYC_STATUS_PENDING_VERIFICATION) {
+    //         Alert::warning(trans('public.invalid_action'), trans('public.invalid_status'));
 
-            return back();
+    //         return back();
 
-        } else if ($user->kyc_approval_status == User::KYC_STATUS_VERIFIED) {
-            Alert::warning(trans('public.invalid_action'), trans('public.user_verified'));
+    //     } else if ($user->kyc_approval_status == User::KYC_STATUS_VERIFIED) {
+    //         Alert::warning(trans('public.invalid_action'), trans('public.user_verified'));
 
-            return back();
-        }
+    //         return back();
+    //     }
 
-        $user->kyc_approval_status = $request->input('approval');
-        $user->save();
+    //     $user->kyc_approval_status = $request->input('approval');
+    //     $user->save();
 
-        ActionLogs::create([
-            'user_id' => Auth::user()->id,
-            'type' => get_class($user),
-            'description' => 'Admin with id: '. Auth::user()->id .' has APPROVED KYC of user ' . $user->name . ', ' . $user->email . ' with id: '. $user->id,
-        ]);
+    //     ActionLogs::create([
+    //         'user_id' => Auth::user()->id,
+    //         'type' => get_class($user),
+    //         'description' => 'Admin with id: '. Auth::user()->id .' has APPROVED KYC of user ' . $user->name . ', ' . $user->email . ' with id: '. $user->id,
+    //     ]);
 
-        Alert::success(trans('public.done'), trans('public.successfully_approve_kyc'));
-        return redirect()->back();
-    }
+    //     Alert::success(trans('public.done'), trans('public.successfully_approve_kyc'));
+    //     return redirect()->back();
+    // }
 
     public function adjustWallet(Request $request)
     {

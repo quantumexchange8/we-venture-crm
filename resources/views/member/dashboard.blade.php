@@ -5,8 +5,8 @@
 @section('contents')
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <div class="w-full p-4 text-center bg-[#FDFCF3] border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-            <h5 class="mb-2 text-2xl font-bold text-orange-400 dark:text-white">@lang('public.lot_size_pool') (UM)</h5>
+        <div class="w-full p-4 text-center bg-blue-100 border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <h5 class="mb-2 text-2xl font-bold text-blue-500 dark:text-white">@lang('public.lot_size_pool') (UM)</h5>
             <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
                 <h3 class="mb-2 text-3xl font-extrabold text-[#696057]">
                     $ {{ number_format(\App\Models\Commissions::getLotSizePool(), 2) }}
@@ -14,8 +14,8 @@
             </div>
         </div>
 
-        <div class="w-full p-4 text-center bg-[#FDFCF3] border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
-            <h5 class="mb-2 text-2xl font-bold text-orange-400 dark:text-white">@lang('public.lot_size_pool') (RM)</h5>
+        <div class="w-full p-4 text-center bg-blue-100 border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <h5 class="mb-2 text-2xl font-bold text-blue-500 dark:text-white">@lang('public.lot_size_pool') (RM)</h5>
             <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
                 <h3 class="mb-2 text-3xl font-extrabold text-[#696057]">
                     $ {{ number_format(\App\Models\Commissions::getLotSizePool() * 2, 2) }}
@@ -28,9 +28,9 @@
         <div class="grid grid-flow-row grid-flow-cols grid-cols-3 gap-6 my-4 max-[1250px]:grid-rows-auto max-[1320px]:grid-cols-2 max-[1000px]:grid-cols-1">
             <div class="flex justify-center max-[1320px]:justify-start ">
                 <div
-                    class="block rounded-lg bg-[#FDFCF3] text-center shadow-lg dark:bg-neutral-700 w-full border-2">
+                    class="block rounded-lg bg-blue-100 text-center shadow-lg dark:bg-neutral-700 w-full border-2">
                     <div
-                        class="border-b-2 border-neutral-100 py-6 px-6 dark:border-neutral-600 dark:text-neutral-50 flex justify-center text-orange-400 font-bold text-xl">
+                        class="border-b-2 border-neutral-100 py-6 px-6 dark:border-neutral-600 dark:text-neutral-50 flex justify-center text-blue-500 font-bold text-xl">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                              class="w-6 h-6 mr-3 mt-1">
                             <path fill-rule="evenodd"
@@ -39,7 +39,7 @@
                         </svg>
                         @lang('public.personal_deposit')
                     </div>
-                    <div class="w-full max-w-md p-6 mx-auto bg-[#FDFCF3]">
+                    <div class="w-full max-w-md p-6 mx-auto bg-blue-100">
                         <div class="flex items-center justify-between mb-4">
                             <h5 class="my-2 text-xl text-[#696057] font-bold leading-none dark:text-white">
                                 @lang('public.total'): ${{number_format($personal_total,2)}}
@@ -54,7 +54,7 @@
                                     <li class="py-3 sm:py-4">
                                         <div class="flex items-center space-x-4">
                                             <div class="flex-1 min-w-0">
-                                                <p class="text-left text-sm font-bold text-orange-400 truncate dark:text-white">
+                                                <p class="text-left text-sm font-bold text-blue-500 truncate dark:text-white">
                                                     {{$deposit->broker->name}}
                                                 </p>
                                             </div>
@@ -71,9 +71,9 @@
             </div>
             <div class="flex justify-center max-[1320px]:justify-start">
                 <div
-                    class="block rounded-lg bg-[#FDFCF3] text-center shadow-lg dark:bg-neutral-700 w-full border-2">
+                    class="block rounded-lg bg-blue-100 text-center shadow-lg dark:bg-neutral-700 w-full border-2">
                     <div
-                        class="border-b-2 border-neutral-100 py-6 px-6 dark:border-neutral-600 dark:text-neutral-50 flex justify-center text-orange-400 font-bold text-xl">
+                        class="border-b-2 border-neutral-100 py-6 px-6 dark:border-neutral-600 dark:text-neutral-50 flex justify-center text-blue-500 font-bold text-xl">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                              class="w-6 h-6 mr-3 mt-1">
                             <path d="M12 7.5a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"/>
@@ -85,7 +85,7 @@
                         </svg>
                         @lang('public.group_deposit')
                     </div>
-                    <div class="w-full max-w-md p-6 mx-auto bg-[#FDFCF3]">
+                    <div class="w-full max-w-md p-6 mx-auto bg-blue-100">
                         <div class="flex items-center justify-between mb-4">
                             <h5 class="my-2 text-xl text-[#696057] font-bold leading-none dark:text-white">
                                 @lang('public.total'): ${{number_format($group_deposits_total,2)}}
@@ -103,7 +103,7 @@
                                     <li class="py-3 sm:py-4">
                                         <div class="flex items-center space-x-4">
                                             <div class="flex-1 min-w-0">
-                                                <p class="text-left text-sm font-bold text-orange-400 truncate dark:text-white">
+                                                <p class="text-left text-sm font-bold text-blue-500 truncate dark:text-white">
                                                     {{$group_deposit->name}}
                                                 </p>
                                             </div>
@@ -119,11 +119,11 @@
                 </div>
             </div>
             <div class="flex justify-center max-[1320px]:justify-start max-[1000px]:h-auto">
-                <div class="p-4 block rounded-lg bg-[#FDFCF3] text-center shadow-lg dark:bg-neutral-700 w-full border-2">
+                <div class="p-4 block rounded-lg bg-blue-100 text-center shadow-lg dark:bg-neutral-700 w-full border-2">
                     <h4 class="px-12 text-xl font-bold leading-tight text-[#696057] dark:text-neutral-50 max-lg:hidden">
                         {{$user->name}}
                     </h4>
-                    <div class="border-b-2 border-neutral-200 py-4 px-4 dark:border-neutral-600 dark:text-neutral-50 flex justify-center text-orange-400 font-bold text-xl">
+                    <div class="border-b-2 border-neutral-200 py-4 px-4 dark:border-neutral-600 dark:text-neutral-50 flex justify-center text-blue-500 font-bold text-xl">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                              class="w-6 h-6 mr-3 mt-1">
                             <path fill-rule="evenodd"
@@ -139,13 +139,13 @@
                                     <div class="flex items-center space-x-4 text-sm">
                                         <div class="flex-shrink-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                                 class="w-6 h-6 text-orange-400">
+                                                 class="w-6 h-6 text-blue-500">
                                                 <path
                                                     d="M2.273 5.625A4.483 4.483 0 015.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 3H5.25a3 3 0 00-2.977 2.625zM2.273 8.625A4.483 4.483 0 015.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 6H5.25a3 3 0 00-2.977 2.625zM5.25 9a3 3 0 00-3 3v6a3 3 0 003 3h13.5a3 3 0 003-3v-6a3 3 0 00-3-3H15a.75.75 0 00-.75.75 2.25 2.25 0 01-4.5 0A.75.75 0 009 9H5.25z"/>
                                             </svg>
                                         </div>
                                         <div class="flex-1 min-w-0 text-left">
-                                            <p class="text-orange-400 font-semibold truncate dark:text-white">
+                                            <p class="text-blue-500 font-semibold truncate dark:text-white">
                                                 @lang('public.personal_daily_deposit')
                                             </p>
                                         </div>
@@ -156,13 +156,13 @@
                                     <div class="flex items-center space-x-4 text-sm">
                                         <div class="flex-shrink-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                                 class="w-6 h-6 text-orange-400">
+                                                 class="w-6 h-6 text-blue-500">
                                                 <path
                                                     d="M2.273 5.625A4.483 4.483 0 015.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 3H5.25a3 3 0 00-2.977 2.625zM2.273 8.625A4.483 4.483 0 015.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 6H5.25a3 3 0 00-2.977 2.625zM5.25 9a3 3 0 00-3 3v6a3 3 0 003 3h13.5a3 3 0 003-3v-6a3 3 0 00-3-3H15a.75.75 0 00-.75.75 2.25 2.25 0 01-4.5 0A.75.75 0 009 9H5.25z"/>
                                             </svg>
                                         </div>
                                         <div class="flex-1 min-w-0 text-left">
-                                            <p class="text-orange-400 font-semibold truncate dark:text-white">
+                                            <p class="text-blue-500 font-semibold truncate dark:text-white">
                                                 @lang('public.personal_monthly_deposit')
                                             </p>
                                         </div>
@@ -176,13 +176,13 @@
                                     <div class="flex items-center space-x-4 text-sm">
                                         <div class="flex-shrink-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                                 class="w-6 h-6 text-orange-400">
+                                                 class="w-6 h-6 text-blue-500">
                                                 <path
                                                     d="M2.273 5.625A4.483 4.483 0 015.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 3H5.25a3 3 0 00-2.977 2.625zM2.273 8.625A4.483 4.483 0 015.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 6H5.25a3 3 0 00-2.977 2.625zM5.25 9a3 3 0 00-3 3v6a3 3 0 003 3h13.5a3 3 0 003-3v-6a3 3 0 00-3-3H15a.75.75 0 00-.75.75 2.25 2.25 0 01-4.5 0A.75.75 0 009 9H5.25z"/>
                                             </svg>
                                         </div>
                                         <div class="flex-1 min-w-0 text-left">
-                                            <p class="text-orange-400 font-semibold truncate dark:text-white">
+                                            <p class="text-blue-500 font-semibold truncate dark:text-white">
                                                 @lang('public.group_daily_deposit')
                                             </p>
                                         </div>
@@ -193,13 +193,13 @@
                                     <div class="flex items-center space-x-4 text-sm">
                                         <div class="flex-shrink-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                                 class="w-6 h-6 text-orange-400">
+                                                 class="w-6 h-6 text-blue-500">
                                                 <path
                                                     d="M2.273 5.625A4.483 4.483 0 015.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 3H5.25a3 3 0 00-2.977 2.625zM2.273 8.625A4.483 4.483 0 015.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 6H5.25a3 3 0 00-2.977 2.625zM5.25 9a3 3 0 00-3 3v6a3 3 0 003 3h13.5a3 3 0 003-3v-6a3 3 0 00-3-3H15a.75.75 0 00-.75.75 2.25 2.25 0 01-4.5 0A.75.75 0 009 9H5.25z"/>
                                             </svg>
                                         </div>
                                         <div class="flex-1 min-w-0 text-left">
-                                            <p class="text-orange-400 font-semibold truncate dark:text-white">
+                                            <p class="text-blue-500 font-semibold truncate dark:text-white">
                                                 @lang('public.group_daily_withdrawal')
                                             </p>
                                         </div>
@@ -210,13 +210,13 @@
                                     <div class="flex items-center space-x-4 text-sm">
                                         <div class="flex-shrink-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                                 class="w-6 h-6 text-orange-400">
+                                                 class="w-6 h-6 text-blue-500">
                                                 <path
                                                     d="M2.273 5.625A4.483 4.483 0 015.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 3H5.25a3 3 0 00-2.977 2.625zM2.273 8.625A4.483 4.483 0 015.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 6H5.25a3 3 0 00-2.977 2.625zM5.25 9a3 3 0 00-3 3v6a3 3 0 003 3h13.5a3 3 0 003-3v-6a3 3 0 00-3-3H15a.75.75 0 00-.75.75 2.25 2.25 0 01-4.5 0A.75.75 0 009 9H5.25z"/>
                                             </svg>
                                         </div>
                                         <div class="flex-1 min-w-0 text-left">
-                                            <p class="text-orange-400 font-semibold truncate dark:text-white">
+                                            <p class="text-blue-500 font-semibold truncate dark:text-white">
                                                 @lang('public.group_monthly_deposit')
                                             </p>
                                         </div>
@@ -227,13 +227,13 @@
                                     <div class="flex items-center space-x-4 text-sm">
                                         <div class="flex-shrink-0">
                                             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
-                                                 class="w-6 h-6 text-orange-400">
+                                                 class="w-6 h-6 text-blue-500">
                                                 <path
                                                     d="M2.273 5.625A4.483 4.483 0 015.25 4.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 3H5.25a3 3 0 00-2.977 2.625zM2.273 8.625A4.483 4.483 0 015.25 7.5h13.5c1.141 0 2.183.425 2.977 1.125A3 3 0 0018.75 6H5.25a3 3 0 00-2.977 2.625zM5.25 9a3 3 0 00-3 3v6a3 3 0 003 3h13.5a3 3 0 003-3v-6a3 3 0 00-3-3H15a.75.75 0 00-.75.75 2.25 2.25 0 01-4.5 0A.75.75 0 009 9H5.25z"/>
                                             </svg>
                                         </div>
                                         <div class="flex-1 min-w-0 text-left">
-                                            <p class="text-orange-400 font-semibold truncate dark:text-white">
+                                            <p class="text-blue-500 font-semibold truncate dark:text-white">
                                                 @lang('public.group_monthly_withdrawal')
                                             </p>
                                         </div>
@@ -247,9 +247,9 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center max-[1000px]:col-span-1 max-[1250px]:justify-start">
-                <div class="px-6 block rounded-lg bg-[#FDFCF3]  shadow-lg dark:bg-neutral-700 w-full border-2">
-                    <div class="inline-flex items-center w-full gap-2 justify-center pt-6 text-orange-400 font-bold text-xl">
+            <div class="flex justify-center col-span-2 ">
+                <div class="px-6 block rounded-lg bg-blue-100  shadow-lg dark:bg-neutral-700 w-full border-2">
+                    <div class="inline-flex items-center w-full gap-2 justify-center pt-6 text-blue-500 font-bold text-xl">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                              stroke="currentColor" class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
@@ -268,12 +268,12 @@
                     <div class="mx-4 my-3">
                         <div class="py-4 px-2 flex flex-col gap-4 items-center justify-center">
                             <p class="text-lg text-neutral-600 dark:text-neutral-200 font-medium ">
-                                @lang('public.referral_id'): <span class="text-orange-500 font-semibold">{{$user->referral_id}}</span>
+                                @lang('public.referral_id'): <span class="text-blue-500 font-semibold">{{$user->referral_id}}</span>
                             </p>
                             {{ QrCode::size(180)->generate($user->url) }}
                             <div class="flex w-full">
                                 <button id="copyLink"
-                                        class="inline-flex items-center px-3 text-sm text-orange-500 bg-orange-200 border border-r-0 border-orange-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
+                                        class="inline-flex items-center px-3 text-sm text-blue-500 bg-blue-200 border border-r-0 border-blue-300 rounded-l-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
                                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                          stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -282,7 +282,7 @@
                                 </button>
                                 <input id="refLink" type="text" id="website-admin"
                                        value="{{ $user->url }}"
-                                       class="select-all rounded-none rounded-r-lg bg-orange-50 border text-orange-500 focus:ring-orange-500 focus:border-orange-500 block flex-1 min-w-0 text-sm border-orange-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500"
+                                       class="select-all rounded-none rounded-r-lg bg-blue-50 border text-blue-500 focus:ring-blue-500 focus:border-blue-500 block flex-1 min-w-0 text-sm border-blue-300 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                        placeholder="elonmusk" disabled>
                             </div>
                         </div>
@@ -291,7 +291,7 @@
 {{--                            <div class="mt-3">--}}
 {{--                                <button type="button"--}}
 {{--                                        onclick=" window.open('{{$shareFB}}','_blank')"--}}
-{{--                                        class="text-white bg-orange-400 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">--}}
+{{--                                        class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">--}}
 {{--                                    <svg class="w-6 h-6" viewBox="0 0 48 48" fill="none"--}}
 {{--                                         xmlns="http://www.w3.org/2000/svg">--}}
 {{--                                        <path--}}
@@ -301,7 +301,7 @@
 {{--                                </button>--}}
 {{--                                <button type="button"--}}
 {{--                                        onclick=" window.open('{{$shareTwitter}}','_blank')"--}}
-{{--                                        class="text-white bg-orange-400 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">--}}
+{{--                                        class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">--}}
 {{--                                    <svg class="w-6 h-6" viewBox="0 0 48 48" fill="none"--}}
 {{--                                         xmlns="http://www.w3.org/2000/svg">--}}
 {{--                                        <path--}}
@@ -311,7 +311,7 @@
 {{--                                </button>--}}
 {{--                                <button type="button"--}}
 {{--                                        onclick=" window.open('{{$shareTelegram}}','_blank')"--}}
-{{--                                        class="text-white bg-orange-400 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">--}}
+{{--                                        class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">--}}
 {{--                                    <svg class="w-6 h-6" viewBox="0 0 48 48" fill="none"--}}
 {{--                                         xmlns="http://www.w3.org/2000/svg">--}}
 {{--                                        <path--}}
@@ -321,7 +321,7 @@
 {{--                                </button>--}}
 {{--                                <button type="button"--}}
 {{--                                        onclick=" window.open('{{$shareWA}}','_blank')"--}}
-{{--                                        class="text-white bg-orange-400 hover:bg-orange-600 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">--}}
+{{--                                        class="text-white bg-blue-500 hover:bg-blue-600 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">--}}
 {{--                                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" class="w-6 h-6"--}}
 {{--                                         viewBox="0,0,256,256" style="fill:#000000;">--}}
 {{--                                        <g fill="#ffffff" fill-rule="nonzero" stroke="none" stroke-width="1"--}}
@@ -340,17 +340,17 @@
                     </div>
                 </div>
             </div>
-            <div class="flex justify-center max-[1320px]:justify-start max-[1000px]:col-span-1 max-[1320px]:col-span-2 ">
-                <div class="block rounded-lg bg-[#FDFCF3] shadow-lg dark:bg-neutral-700 w-full border-2">
-                    <div class="py-6 px-6 dark:border-neutral-600 dark:text-neutral-50 inline-flex items-center w-full gap-2 justify-center text-orange-400 font-bold text-xl">
-                        <svg class="h-6 w-6 text-orange-400"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <polyline points="8 12 12 16 16 12" />  <line x1="12" y1="8" x2="12" y2="16" /></svg>
+            <!-- <div class="flex justify-center max-[1320px]:justify-start max-[1000px]:col-span-1 max-[1320px]:col-span-2 ">
+                <div class="block rounded-lg bg-blue-100 shadow-lg dark:bg-neutral-700 w-full border-2">
+                    <div class="py-6 px-6 dark:border-neutral-600 dark:text-neutral-50 inline-flex items-center w-full gap-2 justify-center text-blue-500 font-bold text-xl">
+                        <svg class="h-6 w-6 text-blue-500"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <circle cx="12" cy="12" r="10" />  <polyline points="8 12 12 16 16 12" />  <line x1="12" y1="8" x2="12" y2="16" /></svg>
                         @lang('public.download_app')
                     </div>
                     <div class="flow-root px-6">
                         <a href="{{ $app_download_link }}" target="_blank" class="flex justify-center my-4 w-full">
                             <button
                                 type="button"
-                                class=" text-white bg-orange-400 border border-orange-400 hover:bg-orange-500 hover:text-white focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                                class=" text-white bg-blue-500 border border-blue-600 hover:bg-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                                 id="downloadAPK"
                             >
                                 <svg class="h-6 w-6 mr-1 text-white"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <path d="M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-2" />  <polyline points="7 11 12 16 17 11" />  <line x1="12" y1="4" x2="12" y2="16" /></svg>
@@ -363,10 +363,10 @@
                     </div>
 
                 </div>
-            </div>
-            <div class="flex justify-center max-[1320px]:justify-start max-[1000px]:col-span-1 max-[1320px]:col-span-2 ">
-                <div class="block  rounded-lg bg-[#FDFCF3] shadow-lg dark:bg-neutral-700 w-full border-2">
-                    <div class="border-b-2 border-neutral-100 py-6 px-6 dark:border-neutral-600 dark:text-neutral-50 flex justify-center text-orange-400 font-bold text-xl">
+            </div> -->
+            <div class="flex justify-center max-[1000px]:justify-end max-[1320px]:col-span-2">
+                <div class="block rounded-lg bg-blue-100 shadow-lg dark:bg-neutral-700 w-full border-2">
+                    <div class="border-b-2 border-neutral-100 py-6 px-6 dark:border-neutral-600 dark:text-neutral-50 flex justify-center text-blue-500 font-bold text-xl">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                              class="w-6 h-6 mr-3 mt-1">
                             <path fill-rule="evenodd"
@@ -379,7 +379,7 @@
                     <div class="flow-root px-6">
                         <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
                             @foreach($news_all as $news)
-                                <li class="py-3 sm:py-4 hover:bg-orange-100">
+                                <li class="py-3 sm:py-4 hover:bg-blue-100">
                                     <a href="javascript:void(0)" class="w-full" data-te-toggle="modal"
                                        data-te-target="#newsModal-{{ $news->id }}"
                                        data-te-ripple-init
@@ -411,7 +411,7 @@
                 <!-- Modal content -->
                 <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
                     <!-- Modal header -->
-                    <div class="flex items-start justify-between p-6 border-b rounded-t dark:border-gray-600 text-orange-400">
+                    <div class="flex items-start justify-between p-6 border-b rounded-t dark:border-gray-600 text-blue-500">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                              class="w-6 h-6 mr-3 mt-1">
                             <path fill-rule="evenodd"
@@ -450,7 +450,7 @@
                                                     @endif
                                                 </div>
                                                 <div class="flex-1 min-w-0 text-left">
-                                                    <p class="text-orange-400 font-semibold truncate dark:text-white">
+                                                    <p class="text-blue-500 font-semibold truncate dark:text-white">
                                                         {{$deposit->broker->name}}
                                                     </p>
                                                 </div>
@@ -462,7 +462,7 @@
                                     @endforeach
                                 @else
                                     <li>
-                                        <div class="w-full flex p-4 mb-4 text-sm text-warning-800 border border-warning-300 rounded-lg bg-warning-50 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-800" role="alert">
+                                        <div class="w-full flex p-4 mb-4 text-sm text-blue-800 border border-blue-300 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-500 dark:border-blue-800" role="alert">
                                             <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
                                             <span class="sr-only">@lang('public.info')</span>
                                             <div>
@@ -474,7 +474,7 @@
                             </ul>
                             <div class="flex items-center float-right mt-4">
                                 <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                    <p class="font-bold text-xl text-orange-400">@lang('public.total'): ${{number_format($personal_total,2)}}</p>
+                                    <p class="font-bold text-xl text-blue-500">@lang('public.total'): ${{number_format($personal_total,2)}}</p>
                                 </div>
                             </div>
                         </div>
@@ -497,7 +497,7 @@
                 <div
                     class="pointer-events-auto relative flex max-h-[100%] w-full flex-col overflow-hidden rounded-md border-none bg-white bg-clip-padding text-current shadow-lg outline-none dark:bg-neutral-600">
                     <div
-                        class="flex flex-shrink-0 items-center justify-between text-orange-400 rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
+                        class="flex flex-shrink-0 items-center justify-between text-blue-500 rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                              class="w-6 h-6 mr-3 mt-1">
                             <path d="M12 7.5a2.25 2.25 0 100 4.5 2.25 2.25 0 000-4.5z"/>
@@ -541,11 +541,11 @@
                                                         @if ($group_deposit->profile_image)
                                                             <img src="{{ asset('uploads/users/' .$group_deposit->profile_image)}}" class="w-10 h-10 rounded-full bg-red-400" alt="">
                                                         @else
-                                                            <img src="{{url('/img/profile.png')}}" class="w-10 h-10 rounded-full bg-orange-400" alt="">
+                                                            <img src="{{url('/img/profile.png')}}" class="w-10 h-10 rounded-full bg-blue-500" alt="">
                                                         @endif
                                                     </div>
                                                     <div class="flex-1 min-w-0">
-                                                        <p class="font-semibold text-orange-400 text-md break-words">
+                                                        <p class="font-semibold text-blue-500 text-md break-words">
                                                             {{$group_deposit->name}}
                                                         </p>
                                                     </div>
@@ -581,7 +581,7 @@
                                     @endforeach
                                 @else
                                     <li>
-                                        <div class="w-full flex p-4 mb-4 text-sm text-warning-800 border border-warning-300 rounded-lg bg-warning-50 dark:bg-gray-800 dark:text-blue-400 dark:border-blue-800" role="alert">
+                                        <div class="w-full flex p-4 mb-4 text-sm text-blue-800 border border-blue-300 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-500 dark:border-blue-800" role="alert">
                                             <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
                                             <span class="sr-only">@lang('public.info')</span>
                                             <div>
@@ -597,7 +597,7 @@
                         class="flex flex-shrink-0 flex-wrap items-center justify-end rounded-b-md border-t-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
                         <div class="flex items-center float-right mt-4">
                             <div class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white">
-                                <p class="font-bold text-xl text-orange-400">@lang('public.total'): ${{number_format($group_deposits_total,2)}}</p>
+                                <p class="font-bold text-xl text-blue-500">@lang('public.total'): ${{number_format($group_deposits_total,2)}}</p>
                             </div>
                         </div>
                     </div>
@@ -615,7 +615,7 @@
                     @foreach($news_all as $news)
                         @if($news->popup_status)
                         <div class="p-8 odd:bg-gray-100 even:bg-white rounded-l border border-gray-300">
-                            <h3 class="text-xl font-semibold text-[#FFA168] dark:text-white underline">
+                            <h3 class="text-xl font-semibold text-[#3F83F8] dark:text-white underline">
                                 {{ $news->title }}
                             </h3>
                             <span class="text-xs font-semibold text-gray-500">{{ $news->created_at }}</span>

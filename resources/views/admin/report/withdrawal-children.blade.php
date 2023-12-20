@@ -36,29 +36,29 @@
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                         </div>
-                        <input type="text" class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-blue-500" placeholder="@lang('public.select_start_date')" autocomplete="off" name="created_start" value="{{ @$search['created_start'] }}">
+                        <input type="text" class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="@lang('public.select_start_date')" autocomplete="off" name="created_start" value="{{ @$search['created_start'] }}">
                     </div>
                     <span class="mx-4 text-gray-500">@lang('public.to')</span>
                     <div class="relative w-full">
                         <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                             <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                         </div>
-                        <input type="text" class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-blue-500" placeholder="@lang('public.select_end_date')" autocomplete="off" name="created_end" value="{{ @$search['created_end'] }}">
+                        <input type="text" class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="@lang('public.select_end_date')" autocomplete="off" name="created_end" value="{{ @$search['created_end'] }}">
                     </div>
                 </div>
                 <div class="flex w-full">
-                    {!! Form::select('country', $get_country_sel, @$search['country'], ['placeholder' => trans('public.select_country'), 'class' => 'font-medium text-sm placeholder:text-gray-400 text-gray-500 bg-gray-50 border border-gray-300 rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500']) !!}
+                    {!! Form::select('country', $get_country_sel, @$search['country'], ['placeholder' => trans('public.select_country'), 'class' => 'font-medium text-sm placeholder:text-gray-400 text-gray-500 bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500']) !!}
 
 
                 </div>
                 <div>
-                    {!! Form::select('status', $get_status_sel, @$search['status'], ['class' => 'bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500']) !!}
+                    {!! Form::select('status', $get_status_sel, @$search['status'], ['class' => 'bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500']) !!}
                 </div>
                 <div>
                     <button type="submit" class="text-white bg-primary hover:bg-primary-600 border border-primary-200 focus:ring-4 focus:outline-none focus:ring-primary-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800 mb-2" name="submit" value="search">@lang('public.search')</button>
                     <button type="submit" class="text-white bg-rose-500 hover:bg-rose-600 border border-rose-200 focus:ring-4 focus:outline-none focus:ring-rose-600 font-medium rounded-lg text-sm max-[770px]:w-full w-auto px-5 py-2.5 text-center dark:bg-rose-600 dark:hover:bg-rose-700 dark:focus:ring-red-800 mb-2" name="submit" value="reset">@lang('public.reset')</button>
                     <button type="button" data-modal-target="importModal" data-modal-toggle="importModal" class="text-white bg-gray-400 hover:bg-gray-600 border border-gray-200 focus:ring-4 focus:outline-none focus:ring-gray-600 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">@lang('public.import')</button>
-                    <button type="submit" name="submit" value="export" class="text-md justify-center text-center text-white py-2 px-6 rounded bg-[#FFA168] hover:bg-orange-400 font-bold float-right flex items-center max-[770px]:w-full max-[760px]:mt-2">
+                    <button type="submit" name="submit" value="export" class="text-md justify-center text-center text-white py-2 px-6 rounded bg-[#3F83F8] hover:bg-blue-400 font-bold float-right flex items-center max-[770px]:w-full max-[760px]:mt-2">
                         <svg class="h-6 w-6 text-white mr-2"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round">  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />  <polyline points="17 8 12 3 7 8" />  <line x1="12" y1="3" x2="12" y2="15" /></svg>
                         @lang('public.export_report')
                     </button>
@@ -73,7 +73,7 @@
             ?>
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg mt-2">
             <table class="w-full text-left">
-                <thead class="uppercase bg-[#FDFCF3] text-sm">
+                <thead class="uppercase bg-blue-100 text-sm">
                 <tr>
                     <th scope="col" class="p-4 text-center">
                         #
@@ -140,7 +140,7 @@
                 </thead>
                 <tbody>
                 @foreach($records as $record)
-                    <tr class="border-b odd:bg-[#F6F6F6] even:bg-[#FDFCF3] text-sm">
+                    <tr class="border-b odd:bg-[#FFFFFF] even:bg-blue-100 text-sm">
                         <th scope="row" class="p-4 text-center font-medium text-gray-900 whitespace-nowrap dark:text-white">
                             {{ $no }}
                         </th>
@@ -209,7 +209,7 @@
             </div>
         </div>
     @else
-        <div class="flex p-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
+        <div class="flex p-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-300" role="alert">
             <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
             <span class="sr-only">@lang('public.info')</span>
             <div>
@@ -238,7 +238,7 @@
                 </button>
                 <div class="px-6 py-6 lg:px-8">
                     <form method="post" action="{{ route('import_withdrawal') }}" enctype="multipart/form-data">@csrf
-                        <h3 class="mb-4 text-xl font-semibold inline-block text-orange-500 dark:text-white">@lang('public.import_withdrawals')</h3>
+                        <h3 class="mb-4 text-xl font-semibold inline-block text-blue-500 dark:text-white">@lang('public.import_withdrawals')</h3>
                         <span class="pl-2 inline-flex pt-2 text-black text-lg font-bold">
                             <button type="submit" name="submit" value="download" class="text-xs text-blue-600 dark:text-blue-500 underline ">@lang('public.download_template')</button>
                     </span>
@@ -258,7 +258,7 @@
 
                         </div>
                         <div class="flex items-center  mb-4 justify-center w-full">
-                            <button type="submit" class="text-white bg-orange-400 hover:bg-orange-600 border border-orange-200 focus:ring-4 focus:outline-none focus:ring-orange-400 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="submit" value="import">Import</button>
+                            <button type="submit" class="text-white bg-blue-400 hover:bg-blue-600 border border-blue-200 focus:ring-4 focus:outline-none focus:ring-blue-400 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" name="submit" value="import">Import</button>
                         </div>
 
                     </form>

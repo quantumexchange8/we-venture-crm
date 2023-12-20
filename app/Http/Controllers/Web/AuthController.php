@@ -117,7 +117,8 @@ class AuthController extends Controller
             'contact_number' => $phoneNumber,
             'rankId'=> Rankings::where('position', 1)->first()->id,
             'upline_referral_id' => $upline_user_id,
-            'hierarchyList' => $hierarchyList
+            'hierarchyList' => $hierarchyList,
+            'kyc_approval_status' => 3
         ]);
         if ($user) {
             $user->setReferralId();

@@ -3,16 +3,16 @@
 @section('title') Change Pin @endsection
 
 @section('contents')
-    <div class="block p-6 shadow-lg bg-[#FDFCF3] max-w-lg mx-auto">
+    <div class="block p-6 shadow-lg bg-blue-100 max-w-lg mx-auto">
         <a href="{{ url('member/dashboard') }}">
-            <img class ="h-20 mx-auto my-6" src="{{url('/img/CW.png')}}">
+            <img class ="h-20 mx-auto my-6" src="{{url('/img/WV-icon.png')}}">
         </a>
         <p class="font-semibold m-6 text-center text-lg text-gray-700">@lang('public.withdrawal_pin')</p>
         <form method="post" action="{{ route('withdrawal_pin_reset') }}">@csrf
             <input type="hidden" name="token" value="{{ $token }}">
             <input type="hidden" name="email" value="{{ $email }}">
             <div class="form-group mb-6">
-                <label for="newPassword" class="flex block mb-2 font-semibold text-orange-400">
+                <label for="newPassword" class="flex block mb-2 font-semibold text-blue-500">
                     @lang('public.new_withdrawal_pin') <button data-popover-target="popover-description" data-popover-placement="bottom-start" type="button"><svg class="w-4 h-4 ml-2 text-gray-400 hover:text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clip-rule="evenodd"></path></svg><span class="sr-only"></span></button>
                     <div data-popover id="popover-description" role="tooltip" class="absolute z-10 invisible inline-block text-sm font-light text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 w-72 dark:bg-gray-800 dark:border-gray-600 dark:text-gray-400">
                         <div class="p-3 space-y-2">
@@ -23,7 +23,7 @@
                     </div>
                 </label>
                 <div class="relative mb-2">
-                    <input type="password" id="newPassword" name="withdrawal_pin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500 @error('withdrawal_pin') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror" placeholder="@lang('public.new_withdrawal_pin')">
+                    <input type="password" id="newPassword" name="withdrawal_pin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 @error('withdrawal_pin') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror" placeholder="@lang('public.new_withdrawal_pin')">
                     <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-auto">
                         <button id='pass_button' type="button" class="text-gray-400 bg-transparent hover:text-gray-900 rounded-lg text-sm  ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5" id="pass_svg">
@@ -38,9 +38,9 @@
                 @enderror
             </div>
             <div class="form-group mb-6">
-                <label for="reenterNewPassword" class="form-label inline-block mb-2 text-orange-400 font-semibold">@lang('public.withdrawal_pin_confirmation')</label>
+                <label for="reenterNewPassword" class="form-label inline-block mb-2 text-blue-500 font-semibold">@lang('public.withdrawal_pin_confirmation')</label>
                 <div class="relative mb-6">
-                    <input type="password" id="reenterNewPassword" name="withdrawal_pin_confirmation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange- @error('withdrawal_pin') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror" placeholder="@lang('public.withdrawal_pin_confirmation')">
+                    <input type="password" id="reenterNewPassword" name="withdrawal_pin_confirmation" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue- @error('withdrawal_pin') bg-red-50 border border-red-500 text-red-900 placeholder-red-700 text-sm rounded-lg focus:ring-red-500 focus:border-red-500 block w-full p-2.5 dark:bg-red-100 dark:border-red-400 @enderror" placeholder="@lang('public.withdrawal_pin_confirmation')">
                     <div class="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-auto">
                         <button id='pass_confirm_button' type="button" class="text-gray-400 bg-transparent hover:text-gray-900 rounded-lg text-sm  ml-auto inline-flex items-center dark:hover:bg-gray-800 dark:hover:text-white">
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5" id="pass_confirm_svg">
@@ -56,21 +56,21 @@
             w-full
             px-6
             py-2.5
-            bg-orange-400
+            bg-blue-500
             text-white
             font-medium
             text-sm
             leading-tight
             rounded
             shadow-md
-            hover:bg-orange-700 hover:shadow-lg
-            focus:bg-orange-700 focus:shadow-lg focus:outline-none focus:ring-0
-            active:bg-orange-800 active:shadow-lg
+            hover:bg-blue-700 hover:shadow-lg
+            focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
+            active:bg-blue-800 active:shadow-lg
             transition
             duration-150
             ease-in-out">@lang('public.change_password')</button>
             <p class="text-gray-800 mt-6 text-center">
-                <a href="{{ url('member/dashboard')}}" class="text-orange-500 hover:text-orange-700 focus:text-orange-700 transition duration-200 ease-in-out hover:underline">@lang('public.back')</a>
+                <a href="{{ url('member/dashboard')}}" class="text-blue-500 hover:text-blue-700 focus:text-blue-700 transition duration-200 ease-in-out hover:underline">@lang('public.back')</a>
             </p>
         </form>
     </div>

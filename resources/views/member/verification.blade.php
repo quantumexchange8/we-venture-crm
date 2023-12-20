@@ -1,4 +1,4 @@
-@extends('layouts.master-member')
+<!-- @extends('layouts.master-member')
 
 @section('title')
     Profile
@@ -9,7 +9,7 @@
         <ol class="inline-flex items-center space-x-1 md:space-x-3 text-lg font-semibold">
             <li class="inline-flex items-center">
                 <a href="javascript:void(0)"
-                   class="inline-flex items-center text-gray-700 hover:text-orange-600 dark:text-gray-400 dark:hover:text-white">
+                   class="inline-flex items-center text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
                          class="w-7 h-7 mr-4">
                         <path fill-rule="evenodd"
@@ -28,7 +28,7 @@
                               clip-rule="evenodd"></path>
                     </svg>
                     <a href="javascript:void(0)"
-                       class="ml-1  text-gray-700 hover:text-orange-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">@lang('public.profile_verification')</a>
+                       class="ml-1  text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">@lang('public.profile_verification')</a>
                 </div>
             </li>
             @if(auth()->user()->kyc_approval_status == App\Models\User::KYC_STATUS_PENDING_VERIFICATION)
@@ -42,7 +42,7 @@
     </nav>
 
     <div
-        class="w-full h-auto p-4 text-center border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 mt-4 bg-[#FDFCF3]">
+        class="w-full h-auto p-4 text-center border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700 mt-4 bg-blue-100">
         <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">
             @lang('public.member_verification_message')
         </p>
@@ -51,7 +51,7 @@
             @csrf
             <div class="grid gap-6 mb-6 md:grid-cols-2">
                 <div>
-                    <p class="block mb-2 font-bold text-2xl text-[#FFA168]">@lang('public.front_id')</p>
+                    <p class="block mb-2 font-bold text-2xl text-[#3F83F8]">@lang('public.front_id')</p>
                     @if($user->front_id_image)
                         <div class="flex justify-center item-center">
                             <img
@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <div>
-                    <p class="block mb-2 font-bold text-2xl text-[#FFA168]">@lang('public.back_id')</p>
+                    <p class="block mb-2 font-bold text-2xl text-[#3F83F8]">@lang('public.back_id')</p>
                     @if($user->back_id_image)
                         <div class="flex justify-center item-center">
                             <img
@@ -130,4 +130,4 @@
 
 
     </script>
-@endsection
+@endsection -->

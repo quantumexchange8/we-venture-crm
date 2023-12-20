@@ -6,7 +6,7 @@
         <!-- With Child -->
         <div class="inline-flex mb-4 w-auto justify-center items-center" id="childContainer">
             <button
-                class="inline-flex items-center justify-center w-8 h-8 bg-[#FFA168] hover:bg-orange-400 rounded-full shrink-0 grow-0 mr-4 dark:bg-gray-600 hide-child"
+                class="inline-flex items-center justify-center w-8 h-8 bg-[#3F83F8] hover:bg-blue-400 rounded-full shrink-0 grow-0 mr-4 dark:bg-gray-600 hide-child"
                 type="button"
                 id="{{ $child->id }}">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6 text-white transform rotate-180" id="svgPlus-child{{ $child->id }}">
@@ -17,49 +17,49 @@
             <a class="w-auto p-4 shadow-lg hover:shadow-2xl rounded-lg dark:bg-neutral-700 dark:text-neutral-50 inline-flex"
                href="{{ route('referral_detail', $child->id) }}" id="childBg-{{ $count }}">
                 <div class="flex items-center space-x-4 sp">
-                    <div class="inline-flex items-center justify-center w-8 h-8 bg-rose-400 rounded-full shrink-0 grow-0 dark:bg-gray-600" id="childColor-{{ $count }}">
+                    <div class="inline-flex items-center justify-center w-8 h-8 rounded-full shrink-0 grow-0 bg-[#3F83F8] dark:bg-gray-600">
                         <span class="font-bold text-md text-white">{{$count}}</span>
                     </div>
-                    <div class="inline-flex items-center justify-center w-14 h-14 overflow-hidden bg-orange-400 rounded-full shrink-0 grow-0 dark:bg-gray-600">
+                    <div class="inline-flex items-center justify-center w-14 h-14 overflow-hidden bg-blue-500 rounded-full shrink-0 grow-0 dark:bg-gray-600">
                         @if ($child->profile_image)
-                            <img src="{{ asset('uploads/users/' .$child->profile_image)}}" id="profile_pic_preview" class="inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-orange-400 rounded-full shrink-0 grow-0  dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
+                            <img src="{{ asset('uploads/users/' .$child->profile_image)}}" id="profile_pic_preview" class="inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-blue-500 rounded-full shrink-0 grow-0  dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
                         @else
-                            <img src="{{url('/img/profile.png')}}" id="profile_pic_preview" class="inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-orange-400 rounded-full shrink-0 grow-0  dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
+                            <img src="{{url('/img/profile.png')}}" id="profile_pic_preview" class="inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-blue-500 rounded-full shrink-0 grow-0  dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
                         @endif
                     </div>
                     <div class="font-semibold dark:text-white">
-                        <div class=" text-md">{{$child->name}}</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">{{$child->email}}</div>
+                        <div class=" text-md text-white">{{$child->name}}</div>
+                        <div class="text-sm text-neutral-800 dark:text-gray-400">{{$child->email}}</div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4 ml-12">
                     <div class="font-semibold dark:text-white">
-                        <div class=" text-md">{{$child->rank->rank_short_form}}</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">@lang('public.rank')</div>
+                        <div class=" text-md text-white">{{$child->rank->rank_short_form}}</div>
+                        <div class="text-sm text-neutral-800 dark:text-gray-400">@lang('public.rank')</div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4 ml-12">
                     <div class="font-semibold dark:text-white">
-                        <div class=" text-md">${{number_format($child->wallet_balance, 2)}}</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">@lang('public.wallet_balance')</div>
+                        <div class=" text-md text-white">${{number_format($child->wallet_balance, 2)}}</div>
+                        <div class="text-sm text-neutral-800 dark:text-gray-400">@lang('public.wallet_balance')</div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4 ml-12">
                     <div class="font-semibold dark:text-white">
-                        <div class=" text-md">${{number_format($child->personalDeposits(), 2)}}</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">@lang('public.total_personal_deposit')</div>
+                        <div class=" text-md text-white">${{number_format($child->personalDeposits(), 2)}}</div>
+                        <div class="text-sm text-neutral-800 dark:text-gray-400">@lang('public.total_personal_deposit')</div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4 ml-12">
                     <div class="font-semibold dark:text-white">
-                        <div class=" text-md">${{number_format($child->groupTotalDeposit(), 2)}}</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">@lang('public.total_group_deposit')</div>
+                        <div class=" text-md text-white">${{number_format($child->groupTotalDeposit(), 2)}}</div>
+                        <div class="text-sm text-neutral-800 dark:text-gray-400">@lang('public.total_group_deposit')</div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4 ml-12">
                     <div class="font-semibold dark:text-white">
-                        <div class=" text-md">{{$child->getClientsCount()}}</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">@lang('public.direct_downlines')</div>
+                        <div class=" text-md text-white">{{$child->getClientsCount()}}</div>
+                        <div class="text-sm text-neutral-800 dark:text-gray-400">@lang('public.direct_downlines')</div>
                     </div>
                 </div>
             </a>
@@ -73,49 +73,49 @@
             <a class="w-full p-4 shadow-lg hover:shadow-2xl rounded-lg dark:bg-neutral-700 dark:text-neutral-50 inline-flex"
                href="{{ route('referral_detail', $child->id) }}" id="childBg-{{ $count }}">
                 <div class="flex items-center space-x-4 sp">
-                    <div class="inline-flex items-center justify-center w-8 h-8 bg-rose-400 rounded-full shrink-0 grow-0 dark:bg-gray-600" id="childColor-{{ $count }}">
+                    <div class="inline-flex items-center justify-center w-8 h-8 bg-[#3F83F8] rounded-full shrink-0 grow-0 dark:bg-gray-600">
                         <span class="font-bold text-md text-white">{{$count}}</span>
                     </div>
-                    <div class="inline-flex items-center justify-center w-14 h-14 overflow-hidden bg-orange-400 rounded-full shrink-0 grow-0 dark:bg-gray-600">
+                    <div class="inline-flex items-center justify-center w-14 h-14 overflow-hidden bg-blue-500 rounded-full shrink-0 grow-0 dark:bg-gray-600">
                         @if ($child->profile_image)
-                            <img src="{{ asset('uploads/users/' .$child->profile_image)}}" id="profile_pic_preview" class=" inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-orange-400 rounded-full shrink-0 grow-0 dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
+                            <img src="{{ asset('uploads/users/' .$child->profile_image)}}" id="profile_pic_preview" class=" inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-blue-500 rounded-full shrink-0 grow-0 dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
                         @else
-                            <img src="{{url('/img/profile.png')}}" id="profile_pic_preview" class=" inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-orange-400 rounded-full shrink-0 grow-0 dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
+                            <img src="{{url('/img/profile.png')}}" id="profile_pic_preview" class=" inline-flex items-center justify-center w-32 h-32 overflow-hidden bg-blue-500 rounded-full shrink-0 grow-0 dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
                         @endif
                     </div>
                     <div class="font-semibold dark:text-white">
-                        <div class=" text-md">{{$child->name}}</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">{{$child->email}}</div>
+                        <div class=" text-md text-white">{{$child->name}}</div>
+                        <div class="text-sm text-neutral-800 dark:text-gray-400">{{$child->email}}</div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4 ml-12">
                     <div class="font-semibold dark:text-white">
-                        <div class=" text-md">{{$child->rank->rank_short_form}}</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">@lang('public.rank')</div>
+                        <div class=" text-md text-white">{{$child->rank->rank_short_form}}</div>
+                        <div class="text-sm text-neutral-800 dark:text-gray-400">@lang('public.rank')</div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4 ml-12">
                     <div class="font-semibold dark:text-white">
-                        <div class=" text-md">${{number_format($child->wallet_balance, 2)}}</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">@lang('public.wallet_balance')</div>
+                        <div class=" text-md text-white">${{number_format($child->wallet_balance, 2)}}</div>
+                        <div class="text-sm text-neutral-800 dark:text-gray-400">@lang('public.wallet_balance')</div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4 ml-12">
                     <div class="font-semibold dark:text-white">
-                        <div class=" text-md">${{number_format($child->personalDeposits(), 2)}}</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">@lang('public.total_personal_deposit')</div>
+                        <div class=" text-md text-white">${{number_format($child->personalDeposits(), 2)}}</div>
+                        <div class="text-sm text-neutral-800 dark:text-gray-400">@lang('public.total_personal_deposit')</div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4 ml-12">
                     <div class="font-semibold dark:text-white">
-                        <div class=" text-md">${{number_format($child->groupTotalDeposit(), 2)}}</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">@lang('public.total_group_deposit')</div>
+                        <div class=" text-md text-white">${{number_format($child->groupTotalDeposit(), 2)}}</div>
+                        <div class="text-sm text-neutral-800 dark:text-gray-400">@lang('public.total_group_deposit')</div>
                     </div>
                 </div>
                 <div class="flex items-center space-x-4 ml-12">
                     <div class="font-semibold dark:text-white">
-                        <div class=" text-md">{{$child->getClientsCount()}}</div>
-                        <div class="text-sm text-gray-500 dark:text-gray-400">@lang('public.direct_downlines')</div>
+                        <div class=" text-md text-white">{{$child->getClientsCount()}}</div>
+                        <div class="text-sm text-neutral-800 dark:text-gray-400">@lang('public.direct_downlines')</div>
                     </div>
                 </div>
             </a>

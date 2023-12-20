@@ -8,7 +8,7 @@
         <ol class="inline-flex items-center space-x-1 md:space-x-3 text-xl font-semibold mb-4">
             <li class="inline-flex items-center">
                 <p href="#"
-                   class="inline-flex items-center text-gray-700 hover:text-orange-600 dark:text-gray-400 dark:hover:text-white">
+                   class="inline-flex items-center text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
                     <svg class="h-8 w-8 text-gray-900 mr-2"  width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">  <path stroke="none" d="M0 0h24v24H0z"/>  <line x1="4" y1="19" x2="20" y2="19" />  <polyline points="4 15 8 9 12 11 16 6 20 10" /></svg>
                     @lang('public.investment')
                 </p>
@@ -22,7 +22,7 @@
                               clip-rule="evenodd"></path>
                     </svg>
                     <p href="#"
-                       class="ml-1  text-gray-700 hover:text-orange-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">
+                       class="ml-1  text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">
                         @lang('public.portfolio')</p>
                 </div>
             </li>
@@ -31,7 +31,7 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
         @foreach($portfolios as $portfolio)
-            <div class="w-full p-4 bg-[#FDFCF3] border-2 border-orange-400 rounded-lg shadow-lg sm:p-8 dark:bg-gray-800 dark:border-gray-700">
+            <div class="w-full p-4 bg-blue-100 border-2 border-blue-400 rounded-lg shadow-lg sm:p-8 dark:bg-gray-800 dark:border-gray-700">
                 <h5 class="mb-4 text-xl font-medium text-gray-500 dark:text-gray-400">{{ $portfolio->name }}</h5>
                 <div class="flex items-baseline text-gray-900 dark:text-white">
                     <span class="text-3xl font-semibold">$</span>
@@ -39,7 +39,7 @@
                 </div>
                 <p class="mb-5 text-base text-gray-500 sm:text-lg dark:text-gray-400">@lang('public.min_amount')</p>
                 <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{!! $portfolio->description !!}</p>
-                <a href="javascript:void(0)" class="mt-6 text-white bg-orange-400 hover:bg-orange-500 focus:ring-4 focus:outline-none focus:ring-orange-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center choose_button" data-te-toggle="modal"
+                <a href="javascript:void(0)" class="mt-6 text-white bg-blue-400 hover:bg-blue-500 focus:ring-4 focus:outline-none focus:ring-blue-200 dark:focus:ring-blue-900 font-medium rounded-lg text-sm px-5 py-2.5 inline-flex justify-center w-full text-center choose_button" data-te-toggle="modal"
                    data-te-target="#investmentPlan-{{ $portfolio->id }}"
                    data-te-ripple-init
                    data-te-ripple-color="light"

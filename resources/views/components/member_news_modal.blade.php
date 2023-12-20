@@ -15,7 +15,7 @@
             <div
                 class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
                 <h5
-                    class="text-xl font-medium leading-normal text-orange-400 dark:text-neutral-200"
+                    class="text-xl font-medium leading-normal text-blue-400 dark:text-neutral-200"
                     id="newsModal-{{ $news->id }}_label">
                     {{ $news->title }}
                     <br>

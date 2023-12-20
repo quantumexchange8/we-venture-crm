@@ -1,9 +1,9 @@
 <div class="flex">
     <div class="flex ml-56 mt-8 max-[520px]:mx-4 max-[760px]:mx-auto">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-orange-400 max-[520px]:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 text-blue-400 max-[520px]:hidden">
             <path stroke-linecap="round" stroke-linejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
         </svg>
-        <h5 class="ml-2 text-xl font-semibold tracking-tight text-orange-500 dark:text-white {{ request()->is('member/welcome_page') ? 'hidden' : '' }}"><span class="max-[475px]:hidden"> @lang('public.wallet') </span>@lang('public.balance'): <span class="text-gray-700">${{Auth::user() ? Auth::user()->wallet_balance : 0.00}}</span></h5>
+        <h5 class="ml-2 text-xl font-semibold tracking-tight text-blue-500 dark:text-white {{ request()->is('member/welcome_page') ? 'hidden' : '' }}"><span class="max-[475px]:hidden"> @lang('public.wallet') </span>@lang('public.balance'): <span class="text-gray-700">${{Auth::user() ? Auth::user()->wallet_balance : 0.00}}</span></h5>
     </div>
     <div class="relative items-center inline-flex pt-6 ml-auto float-right mr-6 ">
         <!-- Icon -->
@@ -103,13 +103,12 @@
                             </svg><button>@lang('public.leave_impersonate')</button>
                         </form>
                     @else
-                        <form method="post" action="{{ url('logout') }}"
-                              class="inline-flex w-full whitespace-nowrap bg-transparent py-2 px-4 text-sm font-normal text-rose-500 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
-                              data-te-dropdown-item-ref>@csrf
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-4 h-4 mt-0.5 mr-2">
-                                <path fill-rule="evenodd" d="M7.5 3.75A1.5 1.5 0 006 5.25v13.5a1.5 1.5 0 001.5 1.5h6a1.5 1.5 0 001.5-1.5V15a.75.75 0 011.5 0v3.75a3 3 0 01-3 3h-6a3 3 0 01-3-3V5.25a3 3 0 013-3h6a3 3 0 013 3V9A.75.75 0 0115 9V5.25a1.5 1.5 0 00-1.5-1.5h-6zm10.72 4.72a.75.75 0 011.06 0l3 3a.75.75 0 010 1.06l-3 3a.75.75 0 11-1.06-1.06l1.72-1.72H9a.75.75 0 010-1.5h10.94l-1.72-1.72a.75.75 0 010-1.06z" clip-rule="evenodd" />
-                            </svg><button>@lang('public.logout')</button>
-                        </form>
+                    <form method="post" action="{{ url('logout') }}"
+                        class="inline-flex w-full whitespace-nowrap bg-transparent py-2 px-4 text-sm font-normal text-rose-500 hover:bg-neutral-100 active:text-neutral-800 active:no-underline disabled:pointer-events-none disabled:bg-transparent disabled:text-neutral-400 dark:text-neutral-200 dark:hover:bg-white/30"
+                        data-te-dropdown-item-ref>
+                        @csrf
+                        <button type="submit">Logout</button>
+                    </form>
                     @endif
                 </li>
             </ul>

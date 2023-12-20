@@ -6,7 +6,7 @@
     <nav class="flex " aria-label="Breadcrumb">
         <ol class="inline-flex items-center space-x-1 md:space-x-3 text-lg font-semibold">
             <li class="inline-flex items-center">
-                <p href="#" class="inline-flex items-center text-gray-700 hover:text-orange-600 dark:text-gray-400 dark:hover:text-white">
+                <p href="#" class="inline-flex items-center text-gray-700 hover:text-blue-600 dark:text-gray-400 dark:hover:text-white">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="w-7 h-7 mr-4">
                         <path fill-rule="evenodd" d="M18.685 19.097A9.723 9.723 0 0021.75 12c0-5.385-4.365-9.75-9.75-9.75S2.25 6.615 2.25 12a9.723 9.723 0 003.065 7.097A9.716 9.716 0 0012 21.75a9.716 9.716 0 006.685-2.653zm-12.54-1.285A7.486 7.486 0 0112 15a7.486 7.486 0 015.855 2.812A8.224 8.224 0 0112 20.25a8.224 8.224 0 01-5.855-2.438zM15.75 9a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" clip-rule="evenodd" />
                     </svg>
@@ -16,19 +16,19 @@
             <li>
                 <div class="flex items-center">
                     <svg aria-hidden="true" class="w-6 h-6 text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"></path></svg>
-                    <p href="#" class="ml-1  text-gray-700 hover:text-orange-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">@lang('public.profile_details')</p>
+                    <p href="#" class="ml-1  text-gray-700 hover:text-blue-600 md:ml-2 dark:text-gray-400 dark:hover:text-white">@lang('public.profile_details')</p>
                 </div>
             </li>
         </ol>
     </nav>
         <div class="grid grid-flow-row grid-flow-cols grid-cols-3 gap-3 my-4 max-[1200px]:grid-rows-auto max-[1200px]:grid-cols-none ">
             <div class="flex justify-center max-[1200px]:justify-start ">
-                <div class="block rounded-lg bg-[#FDFCF3] border-2 text-center shadow-lg dark:bg-neutral-700 w-full">
-                    <div class="pt-6 pb-4 px-6 dark:text-neutral-50 flex text-orange-400 font-bold text-lg">
+                <div class="block rounded-lg bg-blue-100 border-2 text-center shadow-lg dark:bg-neutral-700 w-full">
+                    <div class="pt-6 pb-4 px-6 dark:text-neutral-50 flex text-blue-500 font-bold text-lg">
                         @lang('public.rank')
                     </div>
                     <div class="py-1">
-                        <div class="relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-orange-400 rounded-full dark:bg-gray-600">
+                        <div class="relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-blue-500 rounded-full dark:bg-gray-600">
                             <span class="font-bold text-white dark:text-gray-300 text-lg">{{$rank->rank_short_form}}</span>
                         </div>
                         <h5 class="my-6 text-lg font-bold leading-tight text-[#696057] dark:text-neutral-50">
@@ -38,11 +38,11 @@
                 </div>
             </div>
             <div class="flex justify-center col-span-2 max-[1200px]:col-span-1 max-[1200px]:justify-start ">
-                <div class="block rounded-lg bg-[#FDFCF3] border-2 shadow-lg dark:bg-neutral-700 w-full py-4">
-                    <div class="pt-4 px-6 flex items-center text-orange-400 font-bold text-lg">
+                <div class="block rounded-lg bg-blue-100 border-2 shadow-lg dark:bg-neutral-700 w-full py-4">
+                    <div class="pt-4 px-6 flex items-center text-blue-500 font-bold text-lg">
                         @lang('public.personal_details')
                         @if($user->user_profiles)
-                            <span class="bg-yellow-100 text-yellow-800 text-xs font-medium mx-2 px-2.5 py-0.5 rounded dark:bg-yellow-900 dark:text-yellow-300">@lang('public.process')</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs font-medium mx-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300">@lang('public.process')</span>
                         @endif
                     </div>
                     <div class="grid grid-cols-2 max-[1200px]:grid-cols-none">
@@ -85,25 +85,25 @@
                 </div>
             </div>
             <div class="flex justify-center max-[1200px]:justify-start mt-3 ">
-                <div class="block  rounded-lg bg-[#FDFCF3] border-2 text-center shadow-lg dark:bg-neutral-700 w-full py-4">
-                    <div class="py-4 px-6 dark:text-neutral-50 flex text-orange-400 font-bold text-lg">
+                <div class="block  rounded-lg bg-blue-100 border-2 text-center shadow-lg dark:bg-neutral-700 w-full py-4">
+                    <div class="py-4 px-6 dark:text-neutral-50 flex text-blue-500 font-bold text-lg">
                         @lang('public.avatar')
                     </div>
                     <div class="">
                         @if ($user->profile_image)
-                            <img src="{{ asset('uploads/users/' .$user->profile_image)}}" class="relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-orange-400 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
+                            <img src="{{ asset('uploads/users/' .$user->profile_image)}}" class="relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-blue-500 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
                         @else
-                            <img src="{{url('/img/profile.png')}}" class="relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-orange-400 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
+                            <img src="{{url('/img/profile.png')}}" class="relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-blue-500 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl object-contain">
                         @endif
                     </div>
-                    <button data-modal-target="avatarModal" data-modal-toggle="avatarModal" type="button" class="font-semibold my-6 text-white bg-orange-400 hover:bg-orange-800 focus:ring-4 focus:ring-orange-300 rounded-lg text-sm px-5 py-2.5  dark:bg-orange-600 dark:hover:bg-orange-700 focus:outline-none dark:focus:ring-orange-800">
+                    <button data-modal-target="avatarModal" data-modal-toggle="avatarModal" type="button" class="font-semibold my-6 text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 rounded-lg text-sm px-5 py-2.5  dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                         @lang('public.change_avatar')
                     </button>
                 </div>
             </div>
             <div class="flex justify-center col-span-2 max-[1200px]:col-span-1 max-[1200px]:justify-start mt-3 ">
-                <div class="block rounded-lg bg-[#FDFCF3] border-2 shadow-lg dark:bg-neutral-700 w-full py-4">
-                    <div class="pt-4 px-6 flex text-orange-400 font-bold text-lg">
+                <div class="block rounded-lg bg-blue-100 border-2 shadow-lg dark:bg-neutral-700 w-full py-4">
+                    <div class="pt-4 px-6 flex text-blue-500 font-bold text-lg">
                         @lang('public.wallet_setting')
                     </div>
                     <div class="grid grid-cols-2 max-[1200px]:grid-cols-none">
@@ -158,10 +158,10 @@
         <div class="relative w-full h-full max-w-2xl md:h-auto">
             <form method="post" action="{{ url('member/update-profile-pic') }}" enctype="multipart/form-data">@csrf
             <!-- Modal content -->
-            <div class="relative bg-[#FDFCF3] rounded-lg shadow dark:bg-gray-700">
+            <div class="relative bg-blue-100 rounded-lg shadow dark:bg-gray-700">
                 <!-- Modal header -->
                 <div class="flex items-start justify-between p-4 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-lg font-semibold text-orange-500 dark:text-white">
+                    <h3 class="text-lg font-semibold text-blue-500 dark:text-white">
                         @lang('public.upload_avatar')
                     </h3>
                     <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="avatarModal">
@@ -191,8 +191,8 @@
                 </div>
                 <!-- Modal footer -->
                 <div class="flex items-center p-6 space-x-2 border-t border-gray-200 rounded-b dark:border-gray-600">
-                    <button  type="submit" name="submit" data-modal-hide="avatarModal" type="button" class="text-white bg-orange-500 hover:bg-orange-800 focus:ring-4 focus:outline-none focus:ring-orange-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-orange-600 dark:hover:bg-orange-700 dark:focus:ring-orange-800">@lang('public.save')</button>
-                    <button data-modal-hide="avatarModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-orange-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">@lang('public.cancel')</button>
+                    <button  type="submit" name="submit" data-modal-hide="avatarModal" type="button" class="text-white bg-blue-500 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">@lang('public.save')</button>
+                    <button data-modal-hide="avatarModal" type="button" class="text-gray-500 bg-white hover:bg-gray-100 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg border border-gray-200 text-sm font-medium px-5 py-2.5 hover:text-gray-900 focus:z-10 dark:bg-gray-700 dark:text-gray-300 dark:border-gray-500 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-600">@lang('public.cancel')</button>
                 </div>
 
             </div>
@@ -212,24 +212,24 @@
                     <span class="sr-only">Close modal</span>
                 </button>
                 <div class="px-6 py-6 lg:px-8">
-                    <h3 class="mb-4 text-xl font-medium text-orange-400 dark:text-white">Edit Profile</h3>
+                    <h3 class="mb-4 text-xl font-medium text-blue-500 dark:text-white">Edit Profile</h3>
                     <form class="space-y-6" action="{{ route('edit_profile') }}" method="POST" id="editProfile">
                         @csrf
                         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <div class="space-y-2">
                                 <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.name')</label>
-                                <input type="text" name="name" id="name" value="{{ $user->name }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                <input type="text" name="name" id="name" value="{{ $user->name }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                 <span class="text-danger text-xs error-text name_error"></span>
                             </div>
                             <div class="space-y-2">
                                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.email')</label>
-                                <input type="email" name="email" id="email" value="{{ $user->email }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" disabled>
+                                <input type="email" name="email" id="email" value="{{ $user->email }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" disabled>
                             </div>
                             <div class="space-y-2">
                                 <label for="countries" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.country')</label>
                                 <div class="flex w-full">
                                     <span id="flag" class="fi fi-us mx-4"></span>
-                                    <select id="countries" name="country" class="js-example-basic-single bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500">
+                                    <select id="countries" name="country" class="js-example-basic-single bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
                                         <option value="">@lang('public.select_country')</option>
                                         @foreach ($countries as $country)
                                             <option value="{{ json_encode($country) }}" @if ($user->country == $country->name) selected @endif>
@@ -259,12 +259,12 @@
                             </div>
                             <div class="space-y-2">
                                 <label for="phone" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.contact')</label>
-                                <input type="text" name="contact_number" id="phone" value="{{ $user->contact_number }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                <input type="text" name="contact_number" id="phone" value="{{ $user->contact_number }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                 <span class="text-danger text-xs error-text contact_number_error"></span>
                             </div>
                             <div class="space-y-2 md:col-span-2">
                                 <label for="address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.address')</label>
-                                <input type="text" name="address" id="address" value="{{ $user->address }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                                <input type="text" name="address" id="address" value="{{ $user->address }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                                 <span class="text-danger text-xs error-text address_error"></span>
                             </div>
                         </div>
@@ -285,17 +285,17 @@
                     <span class="sr-only">Close modal</span>
                 </button>
                 <div class="px-6 py-6 lg:px-8">
-                    <h3 class="mb-4 text-xl font-bold text-orange-400 dark:text-white">@lang('public.wallet_address')</h3>
+                    <h3 class="mb-4 text-xl font-bold text-blue-500 dark:text-white">@lang('public.wallet_address')</h3>
                     <form class="space-y-6" action="{{ route('wallet_address') }}" method="POST" id="wallet_address">
                         @csrf
                         <div>
                             <label for="wallet_type" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.wallet_type') (USDT)</label>
-                            <input type="text" name="wallet_type" id="wallet_type" class="bg-gray-50 uppercase border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Wallet Type" readonly value="trc20">
+                            <input type="text" name="wallet_type" id="wallet_type" class="bg-gray-50 uppercase border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="Wallet Type" readonly value="trc20">
                             <span class="text-danger text-xs error-text wallet_type_error"></span>
                         </div>
                         <div>
                             <label for="wallet_address" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.wallet_address')</label>
-                            <input type="text" name="wallet_address" id="wallet_address" placeholder="{{ trans('public.wallet_address') }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="{{ @$user->user_wallet->wallet_address }}">
+                            <input type="text" name="wallet_address" id="wallet_address" placeholder="{{ trans('public.wallet_address') }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" value="{{ @$user->user_wallet->wallet_address }}">
                             <span class="text-danger text-xs error-text wallet_address_error"></span>
                         </div>
                         @if(!empty($user->wallet_address_request))
@@ -319,25 +319,25 @@
                     <span class="sr-only">Close modal</span>
                 </button>
                 <div class="px-6 py-6 lg:px-8">
-                    <h3 class="mb-4 text-xl font-bold text-orange-400 dark:text-white">@lang('public.withdrawal_pin')</h3>
+                    <h3 class="mb-4 text-xl font-bold text-blue-500 dark:text-white">@lang('public.withdrawal_pin')</h3>
                     <form class="space-y-6" action="{{ route('withdrawal_pin') }}" method="POST" id="withdrawal_pin">
                         @csrf
 
                         @if(!empty($user->withdrawal_pin))
                             <div>
                                 <label for="current_withdrawal_pin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.current_withdrawal_pin')</label>
-                                <input type="password" name="current_withdrawal_pin" id="current_withdrawal_pin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="{{ trans('public.current_withdrawal_pin') }}">
+                                <input type="password" name="current_withdrawal_pin" id="current_withdrawal_pin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="{{ trans('public.current_withdrawal_pin') }}">
                                 <span class="text-danger text-xs error-text current_withdrawal_pin_error"></span>
                             </div>
                         @endif
                         <div>
                             <label for="new_withdrawal_pin" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.new_withdrawal_pin')</label>
-                            <input type="password" name="withdrawal_pin" id="new_withdrawal_pin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="{{ trans('public.new_withdrawal_pin') }}">
+                            <input type="password" name="withdrawal_pin" id="new_withdrawal_pin" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" placeholder="{{ trans('public.new_withdrawal_pin') }}">
                             <span class="text-danger text-xs error-text withdrawal_pin_error"></span>
                         </div>
                         <div>
                             <label for="withdrawal_pin_confirmation" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">@lang('public.withdrawal_pin_confirmation')</label>
-                            <input type="password" name="withdrawal_pin_confirmation" id="withdrawal_pin_confirmation" placeholder="{{ trans('public.withdrawal_pin_confirmation') }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-orange-400 focus:border-orange-400 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
+                            <input type="password" name="withdrawal_pin_confirmation" id="withdrawal_pin_confirmation" placeholder="{{ trans('public.withdrawal_pin_confirmation') }}" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white">
                         </div>
                         <button type="submit" class="w-full text-white bg-[#2AC769] hover:bg-success-800 focus:ring-4 focus:outline-none focus:ring-success-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center">@lang('public.save')</button>
                     </form>

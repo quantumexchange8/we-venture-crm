@@ -13,7 +13,7 @@
             <div
                 class="flex flex-shrink-0 items-center justify-between rounded-t-md border-b-2 border-neutral-100 border-opacity-100 p-4 dark:border-opacity-50">
                 <h5
-                    class="text-xl font-medium leading-normal text-orange-400 dark:text-neutral-200"
+                    class="text-xl font-medium leading-normal text-blue-400 dark:text-neutral-200"
                     id="edit_plan-{{ $record->id }}_label">
                     {{ $record->portfolio->name }}
                 </h5>
@@ -46,7 +46,7 @@
                     </label>
                     <input type="text" name="balance" id="balance" aria-label="disabled input 1" disabled
                            readonly value="{{number_format($record->portfolio->min_amount, 2)}}"
-                           class="bg-gray-50 border border-gray-300 text-orange-500 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white balance"
+                           class="bg-gray-50 border border-gray-300 text-blue-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white balance"
                            required>
                     <span class="text-danger text-xs error-text balance_error"></span>
                 </div>
@@ -67,7 +67,7 @@
                            step="0.01"
                            min="0.00"
                            value="{{ $record->deposit_amount }}"
-                           class="block w-full p-2.5 text-sm text-orange-400 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500 amount"
+                           class="block w-full p-2.5 text-sm text-blue-400 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 amount"
                     >
                     <span class="text-danger text-xs error-text amount_error"></span>
                 </div>

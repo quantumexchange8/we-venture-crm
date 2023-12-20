@@ -9,16 +9,16 @@
 @section('contents')
     <div class="flex flex-row">
         <h1 class="flex-1 font-semibold text-2xl text-gray-500">@lang('public.member') / @lang('public.acknowledgement_letter')</h1>
-        <a href="{{ route('setting_listing') }}" class="text-xl font-semibold text-[#FFA168]">@lang('public.back')</a>
+        <a href="{{ route('setting_listing') }}" class="text-xl font-semibold text-[#3F83F8]">@lang('public.back')</a>
     </div>
 
     <form class="space-y-6 md:w-1/2 sm:w-full" action="{{ $submit }}" method="post">
         @csrf
-        <p class="block font-bold text-[#FFA168] dark:text-white">@lang('public.choose_type')</p>
+        <p class="block font-bold text-[#3F83F8] dark:text-white">@lang('public.choose_type')</p>
         <ul class="grid w-full gap-6 md:grid-cols-2">
             <li>
                 <input type="radio" id="hosting-small" name="send_email_type" value="personal" class="hidden peer" checked>
-                <label for="hosting-small" class="inline-flex items-center justify-between w-full px-3 py-1 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-orange-400 peer-checked:text-orange-400 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <label for="hosting-small" class="inline-flex items-center justify-between w-full px-3 py-1 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-400 peer-checked:text-blue-400 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                     <div class="block">
                         <div class="w-full text-lg font-semibold">@lang('public.personal')</div>
                         <div class="w-full">@lang('public.specific_user')</div>
@@ -28,7 +28,7 @@
             </li>
             <li>
                 <input type="radio" id="hosting-big" name="send_email_type" value="group" class="hidden peer">
-                <label for="hosting-big" class="inline-flex items-center justify-between w-full px-3 py-1 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-orange-400 peer-checked:text-orange-400 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                <label for="hosting-big" class="inline-flex items-center justify-between w-full px-3 py-1 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-400 peer-checked:text-blue-400 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                     <div class="block">
                         <div class="w-full text-lg font-semibold">@lang('public.group')</div>
                         <div class="w-full">@lang('public.with_children')</div>
@@ -38,7 +38,7 @@
             </li>
         </ul>
         <div class="text-value">
-            <label for="user" class="block mb-6 font-bold text-[#FFA168] dark:text-white">@lang('public.user')</label>
+            <label for="user" class="block mb-6 font-bold text-[#3F83F8] dark:text-white">@lang('public.user')</label>
             <select class="js-example-basic-single w-full max-w-sm" id="user" name="user">
                 @foreach($users as $user)
                     <option value="{{ $user->id }}">{{ $user->name }}</option>

@@ -16,19 +16,19 @@
     @endif
     <div class="flex flex-row">
         <h1 class="flex-1 font-semibold text-2xl text-gray-500">@lang('public.members') / {{ $user->name }} - @lang('public.deposits')</h1>
-        <a href="{{ route('member_details', $user->id) }}" class="font-semibold text-xl text-[#FFA168]">@lang('public.back')</a>
+        <a href="{{ route('member_details', $user->id) }}" class="font-semibold text-xl text-[#3F83F8]">@lang('public.back')</a>
     </div>
     <div class="mt-8 grid grid-flow-row grid-flow-cols grid-cols-3 gap-3 my-4 max-[1200px]:grid-rows-auto max-[1200px]:grid-cols-none ">
         <div class="relative overflow-x-auto max-[1200px]:col-span-3 mb-4">
-            <table class="w-full text-sm text-left border-2 border-orange-300 bg-[#FDFCF3] shadow-lg text-gray-500 dark:text-gray-400">
+            <table class="w-full text-sm text-left border-2 border-blue-300 bg-blue-100 shadow-lg text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                 <tr>
-                    <th class="flex items-center justify-center bg-[#FDFCF3]">
-                        <div class="my-6 relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-orange-400 rounded-full dark:bg-gray-600">
+                    <th class="flex items-center justify-center bg-blue-100">
+                        <div class="my-6 relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-blue-400 rounded-full dark:bg-gray-600">
                             @if ($user->profile_image)
-                                <img src="{{ asset('uploads/users/' .$user->profile_image)}}" id="profile_pic_preview" class="relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-orange-400 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl">
+                                <img src="{{ asset('uploads/users/' .$user->profile_image)}}" id="profile_pic_preview" class="relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-blue-400 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl">
                             @else
-                                <img src="{{url('/img/profile.png')}}" id="profile_pic_preview" class="relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-orange-400 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl">
+                                <img src="{{url('/img/profile.png')}}" id="profile_pic_preview" class="relative inline-flex items-center justify-center w-28 h-28 overflow-hidden bg-blue-400 rounded-full dark:bg-gray-600font-bold text-white dark:text-gray-300 text-4xl">
                             @endif
                         </div>
                     </th>
@@ -38,11 +38,11 @@
                     <tr>
                         <td class="text-center text-xl">
                             <div class="font-bold">{{ $user->name }}</div>
-                            <div class="mb-4 text-[#FFA168] font-semibold">${{ number_format($total_deposit, 2) }}</div>
+                            <div class="mb-4 text-[#3F83F8] font-semibold">${{ number_format($total_deposit, 2) }}</div>
                         </td>
                     </tr>
                     @foreach($deposit_by_group as $deposit_group)
-                        <tr class="border border-orange-300">
+                        <tr class="border border-blue-300">
                             <td class="flex items-center justify-center">
                                 <span class="m-4">{{ $deposit_group->broker->name }} : <b>${{ number_format($deposit_group->amount, 2) }}</b></span>
                             </td>
@@ -56,21 +56,21 @@
                 @csrf
                 <div class="grid gap-6 grid-cols-2 max-[900px]:grid-cols-1">
                     <div class="w-full">
-                        {!! Form::select('brokersId', $get_broker_sel, @$search['brokersId'], ['class' => 'bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500']) !!}
+                        {!! Form::select('brokersId', $get_broker_sel, @$search['brokersId'], ['class' => 'bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500']) !!}
                     </div>
                     <div date-rangepicker datepicker-format="yyyy/mm/dd" class="flex items-center">
                         <div class="relative w-full">
                             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                 <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                             </div>
-                            <input type="text" class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-blue-500" placeholder="@lang('public.select_start_date')" autocomplete="off" name="transaction_start" value="{{ @$search['transaction_start'] }}">
+                            <input type="text" class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="@lang('public.select_start_date')" autocomplete="off" name="transaction_start" value="{{ @$search['transaction_start'] }}">
                         </div>
                         <span class="mx-4 text-gray-500">@lang('public.to')</span>
                         <div class="relative w-full">
                             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                                 <svg aria-hidden="true" class="w-5 h-5 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path></svg>
                             </div>
-                            <input type="text" class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-orange-500 focus:border-orange-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-blue-500" placeholder="@lang('public.select_end_date')" autocomplete="off" name="transaction_end" value="{{ @$search['transaction_end'] }}">
+                            <input type="text" class="block w-full p-2.5 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="@lang('public.select_end_date')" autocomplete="off" name="transaction_end" value="{{ @$search['transaction_end'] }}">
                         </div>
                     </div>
                     <div class="flex">
@@ -118,7 +118,7 @@
                         </thead>
                         <tbody>
                             @foreach($deposits as $deposit)
-                                <tr class="border-b odd:bg-[#F6F6F6] even:bg-[#FDFCF3]">
+                                <tr class="border-b odd:bg-[#FFFFFF] even:bg-blue-100">
                                     <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                                         {{ $deposit->transaction_at }}
                                     </th>
@@ -154,7 +154,7 @@
                     </div>
                 </div>
             @else
-                <div class="flex p-4 mt-4 mb-4 text-sm text-yellow-800 rounded-lg bg-yellow-50 dark:bg-gray-800 dark:text-yellow-300" role="alert">
+                <div class="flex p-4 mt-4 mb-4 text-sm text-blue-800 rounded-lg bg-blue-50 dark:bg-gray-800 dark:text-blue-300" role="alert">
                     <svg aria-hidden="true" class="flex-shrink-0 inline w-5 h-5 mr-3" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"></path></svg>
                     <span class="sr-only">@lang('public.info')</span>
                     <div>
@@ -177,7 +177,7 @@
                     <span class="sr-only">Close modal</span>
                 </button>
                 <div class="px-6 py-6 lg:px-8">
-                    <h3 class="mb-4 text-xl font-medium text-orange-400 dark:text-white">@lang('public.fund_adjustment')</h3>
+                    <h3 class="mb-4 text-xl font-medium text-blue-400 dark:text-white">@lang('public.fund_adjustment')</h3>
 
                     <form class="space-y-6" method="post" action="{{ route('fund_adjustmnent') }}" id="adjustment-modal">
                         @csrf
@@ -185,7 +185,7 @@
                         <ul class="grid w-full gap-6 md:grid-cols-2 mb-4">
                             <li>
                                 <input type="radio" id="deposit_amount" name="type" value="1" class="hidden peer">
-                                <label for="deposit_amount" class="inline-flex items-center justify-center w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-orange-500 peer-checked:text-orange-400 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                <label for="deposit_amount" class="inline-flex items-center justify-center w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-500 peer-checked:text-blue-400 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <div class="block">
                                         <div class="w-full text-lg font-semibold">@lang('public.deposit_amount')</div>
                                     </div>
@@ -193,10 +193,10 @@
                             </li>
                             <li>
                                 <input type="radio" id="withdraw_amount" name="type" value="2" class="hidden peer">
-                                <label for="withdraw_amount" class="inline-flex items-center justify-center w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-orange-500 peer-checked:text-orange-400 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                <label for="withdraw_amount" class="inline-flex items-center justify-center w-full p-5 text-gray-500 bg-white border border-gray-200 rounded-lg cursor-pointer dark:hover:text-gray-300 dark:border-gray-700 dark:peer-checked:text-blue-500 peer-checked:border-blue-500 peer-checked:text-blue-400 hover:text-gray-600 hover:bg-gray-100 dark:text-gray-400 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <div class="block">
                                         <div class="w-full text-lg font-semibold">@lang('public.withdrawal_amount') @if($user->withdrawal_action == \App\Models\User::DISABLE_WITHDRAWAL)
-                                                <span class="inline-block whitespace-nowrap rounded-[0.27rem] bg-yellow-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-yellow-700">
+                                                <span class="inline-block whitespace-nowrap rounded-[0.27rem] bg-blue-100 px-[0.65em] pb-[0.25em] pt-[0.35em] text-center align-baseline text-[0.75em] font-bold leading-none text-blue-700">
                                 @lang('public.disable')
                             </span>
                                             @elseif($user->withdrawal_action == \App\Models\User::ENABLE_WITHDRAWAL)
@@ -210,18 +210,18 @@
                         </ul>
                         <span class="text-danger mb-4 text-xs error-text type_error"></span>
                         <div>
-                            <label for="brokersId" class="block mb-2 text-md font-medium text-[#FFA168] dark:text-white">@lang('public.brokers')</label>
-                            {!! Form::select('brokersId', $get_broker_sel, @old('brokersId'), ['class' => 'bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500']) !!}
+                            <label for="brokersId" class="block mb-2 text-md font-medium text-[#3F83F8] dark:text-white">@lang('public.brokers')</label>
+                            {!! Form::select('brokersId', $get_broker_sel, @old('brokersId'), ['class' => 'bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500']) !!}
                             <span class="text-danger text-xs error-text brokersId_error"></span>
                         </div>
                         <div>
-                            <label for="pamm_id" class="block mb-2 text-md font-medium text-[#FFA168] dark:text-white">@lang('public.pamm')</label>
-                            {!! Form::select('pamm_id', $get_pamm_sel, @old('pamm_id'), ['class' => 'bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-orange-500 dark:focus:border-orange-500', 'placeholder' => trans('public.select_pamm')]) !!}
+                            <label for="pamm_id" class="block mb-2 text-md font-medium text-[#3F83F8] dark:text-white">@lang('public.pamm')</label>
+                            {!! Form::select('pamm_id', $get_pamm_sel, @old('pamm_id'), ['class' => 'bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500', 'placeholder' => trans('public.select_pamm')]) !!}
                             <span class="text-danger text-xs error-text pamm_id_error"></span>
                         </div>
                         <div>
-                            <label for="amount" class="block mb-2 text-md font-medium text-[#FFA168] dark:text-white">@lang('public.amount')</label>
-                            <input type="number" name="amount" id="amount" placeholder="0.00" class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-orange-500 focus:border-orange-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" autocomplete="off" min="1">
+                            <label for="amount" class="block mb-2 text-md font-medium text-[#3F83F8] dark:text-white">@lang('public.amount')</label>
+                            <input type="number" name="amount" id="amount" placeholder="0.00" class="bg-gray-50 border border-gray-300 text-gray-500 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white" autocomplete="off" min="1">
                             <span class="text-danger text-xs error-text amount_error"></span>
                         </div>
                         <div class="text-center">
