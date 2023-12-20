@@ -58,7 +58,7 @@ class CommissionsController extends Controller
                     }
                     break;
                 case 'download':
-                    $filePath = public_path('ClarkWell_Commissions_Import_Template.xlsx');
+                    $filePath = public_path('WeVenture_Commissions_Import_Template.xlsx');
                     return response()->download($filePath);
             }
         }

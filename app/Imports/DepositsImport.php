@@ -75,7 +75,7 @@ class DepositsImport implements ToCollection, WithHeadingRow, withValidation, Sk
 
                 if ($user->email_status == 1 && $user->email_sent == 0) {
                     $data['email'] = $user->email;
-                    $data['title'] = 'Important Information Regarding Your Investment with Clark Well Capital 关于您在汇佳资本的投资的重要信息';
+                    $data['title'] = 'Important Information Regarding Your Investment with We Venture Capital 关于您在汇佳资本的投资的重要信息';
 
                     $html = view('admin.member.acknowledgement_pdf', ['user' => $user])->render();
 

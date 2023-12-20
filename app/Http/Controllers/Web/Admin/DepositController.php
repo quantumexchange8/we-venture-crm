@@ -55,7 +55,7 @@ class DepositController extends Controller
                     }
                     break;
                 case 'download':
-                    $filePath = public_path('ClarkWell_Deposit_Import_Template.xlsx');
+                    $filePath = public_path('WeVenture_Deposit_Import_Template.xlsx');
                     return response()->download($filePath);
             }
         }

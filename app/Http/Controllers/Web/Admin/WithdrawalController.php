@@ -206,7 +206,7 @@ class WithdrawalController extends Controller
                     }
                     break;
                 case 'download':
-                    $filePath = public_path('ClarkWell_Withdrawal_Import_Template.xlsx');
+                    $filePath = public_path('WeVenture_Withdrawal_Import_Template.xlsx');
                     return response()->download($filePath);
             }
         }

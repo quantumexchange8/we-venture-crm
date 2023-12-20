@@ -707,7 +707,7 @@ class MemberController extends Controller
                     }
 
                     $data['email'] = $user->email;
-                    $data['title'] = 'Important Information Regarding Your Investment with Clark Well Capital 关于您在汇佳资本的投资的重要信息';
+                    $data['title'] = 'Important Information Regarding Your Investment with We Venture Capital 关于您在汇佳资本的投资的重要信息';
 
                     $html = view('admin.member.acknowledgement_pdf', ['user' => $user])->render();
 
@@ -726,7 +726,7 @@ class MemberController extends Controller
 
                 } elseif ($send_email_type == 'group') {
 
-                    $data['title'] = 'Important Information Regarding Your Investment with Clark Well Capital 关于您在汇佳资本的投资的重要信息';
+                    $data['title'] = 'Important Information Regarding Your Investment with We Venture Capital 关于您在汇佳资本的投资的重要信息';
 
                     $user_children_ids = $user->getChildrenIds();
                     $user_children_ids[] = $user->id;
