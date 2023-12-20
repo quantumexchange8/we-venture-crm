@@ -285,7 +285,7 @@ class User extends Authenticatable implements JWTSubject
     }
     public function getLeaders()
     {
-        $top_leader = $first_leader = $default = 'OFFICIAL@CLARKWELL.CO';
+        $top_leader = $first_leader = $default = 'OFFICIAL@WEVENTURE.CO';
 
         $upline = explode("-",substr($this->hierarchyList, 1, -1));
             $count = count($upline)-1;

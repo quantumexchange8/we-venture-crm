@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
 
-    <title>@yield('title') | Clark Well</title>
+    <title>@yield('title') | We Venture</title>
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"/>
     <link href="{{ asset('img/WV-icon.png') }}" rel="shortcut icon">

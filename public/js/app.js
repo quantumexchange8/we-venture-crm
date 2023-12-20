@@ -12167,7 +12167,7 @@ const toJSONObject = (obj) => {
 /******/ 			return __webpack_require__.O(result);
 /******/ 		}
 /******/ 		
-/******/ 		var chunkLoadingGlobal = self["webpackChunkclarkwellcrm"] = self["webpackChunkclarkwellcrm"] || [];
+/******/ 		var chunkLoadingGlobal = self["webpackChunkweventurecrm"] = self["webpackChunkweventurecrm"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
 /******/ 	})();
